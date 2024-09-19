@@ -33,19 +33,39 @@
                     var employeeLines = {};
 
                     sitesData.forEach(function(site) {
-                        var siteMarker = L.rectangle([
-                            [site.latitude - 0.01, site.longitude - 0.01],
-                            [site.latitude + 0.01, site.longitude + 0.01]
-                        ], {
+                        // Calculer les points de l'octogone
+                        var points = [];
+                        var radius = 0.005; // Taille initiale de l'octogone
+                        for (var i = 0; i < 8; i++) {
+                            var angle = Math.PI * 2 * i / 8;
+                            var x = site.longitude + radius * Math.cos(angle);
+                            var y = site.latitude + radius * Math.sin(angle);
+                            points.push([y, x]);
+                        }
+
+                        var siteMarker = L.polygon(points, {
                             color: 'blue',
                             fillColor: 'blue',
                             fillOpacity: 0.5
                         }).addTo(map);
 
+                        // Ajuster la taille de l'octogone en fonction du niveau de zoom
+                        map.on('zoomend', function() {
+                            var zoomLevel = map.getZoom();
+                            var newRadius = Math.max(0.0005, 0.005 - (zoomLevel - 6) * 0.0005);
+                            var newPoints = [];
+                            for (var i = 0; i < 8; i++) {
+                                var angle = Math.PI * 2 * i / 8;
+                                var x = site.longitude + newRadius * Math.cos(angle);
+                                var y = site.latitude + newRadius * Math.sin(angle);
+                                newPoints.push([y, x]);
+                            }
+                            siteMarker.setLatLngs(newPoints);
+                        });
+
                         var content = `
                             <b>${site.site_name}</b><br>
-                            <button class="toggle-employees" data-site-id="${site.site_id}" data-employees='${JSON.stringify(site.agents)}' data-lat="${site.latitude}" data-lon="${site.longitude}">Afficher agents</button>
-                            <button class="toggle-employees" data-site-id="${site.site_id}" data-employees='${JSON.stringify(site.agents)}' data-lat="${site.latitude}" data-lon="${site.longitude}">Masquer agents</button>
+                            <button class="toggle-employees" data-site-id="${site.site_id}" data-employees='${JSON.stringify(site.agents)}' data-lat="${site.latitude}" data-lon="${site.longitude}">Afficher/Masquer agents</button>
                         `;
 
                         siteMarker.bindPopup(content);
