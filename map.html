@@ -34,15 +34,21 @@
 
                     sitesData.forEach(function(site) {
                         var siteMarker = L.rectangle([
-                            [site.latitude - 0.001, site.longitude - 0.001],
-                            [site.latitude + 0.001, site.longitude + 0.001]
+                            [site.latitude - 0.01, site.longitude - 0.01],
+                            [site.latitude + 0.01, site.longitude + 0.01]
                         ], {
                             color: 'blue',
                             fillColor: 'blue',
                             fillOpacity: 0.5
                         }).addTo(map);
 
-                        siteMarker.bindTooltip(site.site_name, { permanent: true });
+                        var tooltip = L.tooltip({ permanent: false, interactive: true })
+                            .setContent(site.site_name)
+                            .setLatLng([site.latitude, site.longitude]);
+
+                        siteMarker.on('click', function() {
+                            tooltip.addTo(map);
+                        });
 
                         var content = `
                             <b>${site.site_name}</b><br>
@@ -85,7 +91,7 @@
 
                                 var line = L.polyline([[siteLatLng.lat, siteLatLng.lng], [emp.latitude, emp.longitude]], {
                                     color: '#ff0000',
-                                    weight: 2
+                                    weight: 1 // Diminuer l'épaisseur des lignes
                                 }).addTo(map);
                                 employeeLines[siteId].push(line);
                             });
