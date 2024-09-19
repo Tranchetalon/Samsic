@@ -1,0 +1,4081 @@
+[
+    {
+        "site_id": "000926C",
+        "site_name": "ARKEMA_JARRIE",
+        "latitude": 45.08699422578319,
+        "longitude": 5.735932188224783,
+        "agents": [
+            {
+                "agent_name": "ABADA",
+                "latitude": 45.14063,
+                "longitude": 5.699843
+            },
+            {
+                "agent_name": "AISSANI",
+                "latitude": 45.0781611,
+                "longitude": 5.7743863
+            },
+            {
+                "agent_name": "AUBERNON",
+                "latitude": 45.1366325,
+                "longitude": 5.7087748
+            },
+            {
+                "agent_name": "BAABAA",
+                "latitude": 45.1667,
+                "longitude": 5.7167
+            },
+            {
+                "agent_name": "BAROUDI",
+                "latitude": 45.185627,
+                "longitude": 5.728671
+            },
+            {
+                "agent_name": "BERRIM EL AMMARY",
+                "latitude": 45.2248546,
+                "longitude": 5.6915491
+            },
+            {
+                "agent_name": "BOUCHETATE",
+                "latitude": 45.14063,
+                "longitude": 5.699843
+            },
+            {
+                "agent_name": "BOUMENKAR",
+                "latitude": 45.1920607,
+                "longitude": 5.7332047
+            },
+            {
+                "agent_name": "ZIANE",
+                "latitude": 45.1627228,
+                "longitude": 5.7206821
+            }
+        ]
+    },
+    {
+        "site_id": "001326C",
+        "site_name": "TOTAL_-_FEYZIN",
+        "latitude": 45.675254863640376,
+        "longitude": 4.846796852204186,
+        "agents": [
+            {
+                "agent_name": "ABBACHE",
+                "latitude": 45.7088,
+                "longitude": 4.8606
+            },
+            {
+                "agent_name": "ABBES",
+                "latitude": 45.5785751,
+                "longitude": 4.754109
+            },
+            {
+                "agent_name": "ABDELLATIF",
+                "latitude": 45.7471872,
+                "longitude": 4.7517854
+            },
+            {
+                "agent_name": "ALVES PEREIRA",
+                "latitude": 45.743752,
+                "longitude": 5.1648029
+            },
+            {
+                "agent_name": "BARANY",
+                "latitude": 45.607461,
+                "longitude": 5.150296
+            },
+            {
+                "agent_name": "BELAROUI",
+                "latitude": 45.55,
+                "longitude": 4.8
+            },
+            {
+                "agent_name": "BELHAOUES",
+                "latitude": 45.6125196,
+                "longitude": 5.156984
+            },
+            {
+                "agent_name": "BELHOCINE",
+                "latitude": 45.526666,
+                "longitude": 4.919462
+            },
+            {
+                "agent_name": "BERNASCONI",
+                "latitude": 45.6037878,
+                "longitude": 5.1734353
+            },
+            {
+                "agent_name": "BESSAOUD",
+                "latitude": 45.4062852,
+                "longitude": 4.3688162
+            },
+            {
+                "agent_name": "BOUVIER",
+                "latitude": 45.5254469,
+                "longitude": 4.8634743
+            },
+            {
+                "agent_name": "BRUYERE",
+                "latitude": 45.414285,
+                "longitude": 4.73001
+            },
+            {
+                "agent_name": "COLOMBIER",
+                "latitude": 45.526542,
+                "longitude": 4.850707
+            },
+            {
+                "agent_name": "DIBRANI",
+                "latitude": 45.7792573,
+                "longitude": 4.9443023
+            },
+            {
+                "agent_name": "FATMI",
+                "latitude": 45.784255,
+                "longitude": 4.7935419
+            },
+            {
+                "agent_name": "FIDJEL",
+                "latitude": 45.528718,
+                "longitude": 4.878316
+            },
+            {
+                "agent_name": "FILAL",
+                "latitude": 45.7334679,
+                "longitude": 4.8849761
+            },
+            {
+                "agent_name": "FOREST",
+                "latitude": 45.587032,
+                "longitude": 4.915496
+            },
+            {
+                "agent_name": "GHERSI",
+                "latitude": 45.4792046,
+                "longitude": 4.5226781
+            },
+            {
+                "agent_name": "HAMADI",
+                "latitude": 45.7025,
+                "longitude": 4.8715
+            },
+            {
+                "agent_name": "HUGUES",
+                "latitude": 45.8219363,
+                "longitude": 4.8762572
+            },
+            {
+                "agent_name": "KEBAIER",
+                "latitude": 45.535703,
+                "longitude": 4.949654
+            },
+            {
+                "agent_name": "KEBAIER",
+                "latitude": 45.5173,
+                "longitude": 4.9663
+            },
+            {
+                "agent_name": "KHANCHALI",
+                "latitude": 45.7443366,
+                "longitude": 4.822473
+            },
+            {
+                "agent_name": "MABRUT",
+                "latitude": 45.7169163,
+                "longitude": 4.8060442
+            },
+            {
+                "agent_name": "MAURICE",
+                "latitude": 45.8379,
+                "longitude": 4.3011
+            },
+            {
+                "agent_name": "NAIM",
+                "latitude": 45.6059343,
+                "longitude": 4.7646899
+            },
+            {
+                "agent_name": "NOGUE",
+                "latitude": 45.7748052,
+                "longitude": 4.882193
+            },
+            {
+                "agent_name": "NOUVEAU",
+                "latitude": 45.822,
+                "longitude": 4.8398
+            },
+            {
+                "agent_name": "POIGET",
+                "latitude": 45.5834,
+                "longitude": 4.7982
+            },
+            {
+                "agent_name": "ROUX",
+                "latitude": 45.5173,
+                "longitude": 4.9663
+            },
+            {
+                "agent_name": "ROXO",
+                "latitude": 45.6743252,
+                "longitude": 4.8593324
+            },
+            {
+                "agent_name": "SANCHEZ",
+                "latitude": 45.537886,
+                "longitude": 4.8847364
+            },
+            {
+                "agent_name": "TABOULET",
+                "latitude": 45.7953377,
+                "longitude": 4.8405608
+            },
+            {
+                "agent_name": "TLIBA",
+                "latitude": 45.6693068,
+                "longitude": 4.7528653
+            },
+            {
+                "agent_name": "TORTORELLI",
+                "latitude": 45.6621803,
+                "longitude": 4.8561355
+            },
+            {
+                "agent_name": "TRAORE",
+                "latitude": 45.7409405,
+                "longitude": 4.9779879
+            },
+            {
+                "agent_name": "VRILLET",
+                "latitude": 45.415649,
+                "longitude": 4.7963498
+            }
+        ]
+    },
+    {
+        "site_id": "001230C",
+        "site_name": "ARKEMA_-_MONT",
+        "latitude": 43.42547713578403,
+        "longitude": -0.656058485114593,
+        "agents": [
+            {
+                "agent_name": "ABBAS",
+                "latitude": 45.7285874,
+                "longitude": 4.8514555
+            }
+        ]
+    },
+    {
+        "site_id": "001924C",
+        "site_name": "UCBL_-_LYON",
+        "latitude": 45.7414999826738,
+        "longitude": 4.881133625301765,
+        "agents": [
+            {
+                "agent_name": "ABBAS",
+                "latitude": 45.691302,
+                "longitude": 4.8623969
+            },
+            {
+                "agent_name": "AISSA MAMOUNE",
+                "latitude": 45.7123235,
+                "longitude": 4.8530549
+            },
+            {
+                "agent_name": "AMZIL",
+                "latitude": 45.8221638,
+                "longitude": 4.9069902
+            },
+            {
+                "agent_name": "BAGHDADI",
+                "latitude": 45.7363,
+                "longitude": 4.8687
+            },
+            {
+                "agent_name": "BARRY",
+                "latitude": 45.7928378,
+                "longitude": 4.7808286
+            },
+            {
+                "agent_name": "BARRY",
+                "latitude": 45.692365,
+                "longitude": 4.8771432
+            },
+            {
+                "agent_name": "BENAMER",
+                "latitude": 45.7528035,
+                "longitude": 4.9188923
+            },
+            {
+                "agent_name": "BENBACHIR",
+                "latitude": 45.7645198,
+                "longitude": 4.8922787
+            },
+            {
+                "agent_name": "BOUANANI",
+                "latitude": 45.7099179,
+                "longitude": 4.8587248
+            },
+            {
+                "agent_name": "BRULEY",
+                "latitude": 45.6591468,
+                "longitude": 4.776388
+            },
+            {
+                "agent_name": "CHADDAOUI",
+                "latitude": 45.6983449,
+                "longitude": 4.8989105
+            },
+            {
+                "agent_name": "CHAIBI",
+                "latitude": 45.7504473,
+                "longitude": 4.8828312
+            },
+            {
+                "agent_name": "CHATIRI",
+                "latitude": 45.7633285,
+                "longitude": 4.8562068
+            },
+            {
+                "agent_name": "CHEBRI",
+                "latitude": 45.7413062,
+                "longitude": 4.840651
+            },
+            {
+                "agent_name": "CHENET",
+                "latitude": 45.7264293,
+                "longitude": 4.9122481
+            },
+            {
+                "agent_name": "DERRAGUI",
+                "latitude": 45.7460963,
+                "longitude": 4.8253571
+            },
+            {
+                "agent_name": "HADDAD",
+                "latitude": 45.7025,
+                "longitude": 4.8715
+            },
+            {
+                "agent_name": "HAFI",
+                "latitude": 45.8076493,
+                "longitude": 4.8372245
+            },
+            {
+                "agent_name": "ILLEMASSENE",
+                "latitude": 45.7324724,
+                "longitude": 4.8373015
+            },
+            {
+                "agent_name": "KABA",
+                "latitude": 45.7904,
+                "longitude": 4.8411
+            },
+            {
+                "agent_name": "KEITA",
+                "latitude": 45.7452,
+                "longitude": 4.842
+            },
+            {
+                "agent_name": "KORBESLI",
+                "latitude": 45.7648737,
+                "longitude": 4.8980813
+            },
+            {
+                "agent_name": "KSOURI",
+                "latitude": 47.22311,
+                "longitude": 6.11682
+            },
+            {
+                "agent_name": "LY",
+                "latitude": 45.7819488,
+                "longitude": 4.9004966
+            },
+            {
+                "agent_name": "MENOUER",
+                "latitude": 45.7615748,
+                "longitude": 4.8165938
+            },
+            {
+                "agent_name": "MOSTEFAOUI",
+                "latitude": 45.4808564,
+                "longitude": 4.5286172
+            },
+            {
+                "agent_name": "ROCHA",
+                "latitude": 45.7954033,
+                "longitude": 4.8159591
+            },
+            {
+                "agent_name": "ROMER",
+                "latitude": 45.6988133,
+                "longitude": 4.8659673
+            },
+            {
+                "agent_name": "ROUBACHE",
+                "latitude": 46.1931286,
+                "longitude": 5.199967
+            },
+            {
+                "agent_name": "SOUALEM",
+                "latitude": 45.7728191,
+                "longitude": 4.8738105
+            },
+            {
+                "agent_name": "VALLOT",
+                "latitude": 45.7907927,
+                "longitude": 4.7869926
+            },
+            {
+                "agent_name": "ZENDAOUI",
+                "latitude": 45.7854206,
+                "longitude": 4.9249697
+            }
+        ]
+    },
+    {
+        "site_id": "001898C",
+        "site_name": "CATERPILLAR",
+        "latitude": 45.16682606886964,
+        "longitude": 5.719841635769569,
+        "agents": [
+            {
+                "agent_name": "ABBASSI",
+                "latitude": 45.1439,
+                "longitude": 5.7288
+            },
+            {
+                "agent_name": "AOUGHLIS",
+                "latitude": 45.144041,
+                "longitude": 5.7173021
+            },
+            {
+                "agent_name": "BELAIDI",
+                "latitude": 45.1922913,
+                "longitude": 5.6956212
+            },
+            {
+                "agent_name": "BELHADDAD",
+                "latitude": 45.1439,
+                "longitude": 5.7288
+            },
+            {
+                "agent_name": "BENEDETTI",
+                "latitude": 45.65068,
+                "longitude": 21.85866
+            },
+            {
+                "agent_name": "BESTION",
+                "latitude": 45.1566427,
+                "longitude": 5.7237884
+            },
+            {
+                "agent_name": "BEYA",
+                "latitude": 45.1351745,
+                "longitude": 5.7075801
+            },
+            {
+                "agent_name": "BIZOUX",
+                "latitude": 45.1825812,
+                "longitude": 5.7260067
+            },
+            {
+                "agent_name": "BOKAMBO MATOKO",
+                "latitude": 45.1646799,
+                "longitude": 5.7320793
+            },
+            {
+                "agent_name": "CALU",
+                "latitude": 45.1810084,
+                "longitude": 5.7554197
+            },
+            {
+                "agent_name": "CHABOCHE",
+                "latitude": 45.1260146,
+                "longitude": 5.6702962
+            },
+            {
+                "agent_name": "COTTIN",
+                "latitude": 45.3783194,
+                "longitude": 6.0493067
+            },
+            {
+                "agent_name": "CREPOUX",
+                "latitude": 45.3093868,
+                "longitude": 5.9185269
+            },
+            {
+                "agent_name": "DIALLO",
+                "latitude": 45.1667,
+                "longitude": 5.7167
+            },
+            {
+                "agent_name": "DJEMA",
+                "latitude": 45.1793745,
+                "longitude": 5.7508296
+            },
+            {
+                "agent_name": "EL HADEF",
+                "latitude": 45.172464,
+                "longitude": 5.7418975
+            },
+            {
+                "agent_name": "HANAFI",
+                "latitude": 45.1584356,
+                "longitude": 5.718233
+            },
+            {
+                "agent_name": "MALLEM",
+                "latitude": 45.1634468,
+                "longitude": 5.7468209
+            },
+            {
+                "agent_name": "OUANAS",
+                "latitude": 45.3639,
+                "longitude": 5.5921
+            },
+            {
+                "agent_name": "SACIRI",
+                "latitude": 45.1527646,
+                "longitude": 5.699766
+            },
+            {
+                "agent_name": "SAMAI",
+                "latitude": 45.1584082,
+                "longitude": 5.7165069
+            },
+            {
+                "agent_name": "TOURE",
+                "latitude": 45.165437,
+                "longitude": 5.7254419
+            },
+            {
+                "agent_name": "VUNDA",
+                "latitude": 45.198943,
+                "longitude": 5.7401841
+            }
+        ]
+    },
+    {
+        "site_id": "001541C",
+        "site_name": "AM_-ROMANS",
+        "latitude": 45.046446986855,
+        "longitude": 5.058307447362373,
+        "agents": [
+            {
+                "agent_name": "ABBASSI",
+                "latitude": 45.0450285,
+                "longitude": 5.0715883
+            },
+            {
+                "agent_name": "ALLIER",
+                "latitude": 45.0157336,
+                "longitude": 5.2912048
+            },
+            {
+                "agent_name": "BOUDIER",
+                "latitude": 45.1533,
+                "longitude": 5.3528
+            },
+            {
+                "agent_name": "BRUOT",
+                "latitude": 45.0471741,
+                "longitude": 5.0572538
+            },
+            {
+                "agent_name": "DENOEL",
+                "latitude": 45.0471741,
+                "longitude": 5.0572538
+            },
+            {
+                "agent_name": "RUBICHON",
+                "latitude": 45.0867687,
+                "longitude": 5.0834311
+            }
+        ]
+    },
+    {
+        "site_id": "900009S",
+        "site_name": "PS_CLIENTS_DIVERS",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "ABBOUCHI",
+                "latitude": 43.3445,
+                "longitude": 5.38
+            },
+            {
+                "agent_name": "BELLAHCENE",
+                "latitude": 43.3445,
+                "longitude": 5.38
+            },
+            {
+                "agent_name": "GOLDMANN",
+                "latitude": 43.1219223,
+                "longitude": 5.9572128
+            },
+            {
+                "agent_name": "HASSANI",
+                "latitude": 43.3028099,
+                "longitude": 5.3716074
+            }
+        ]
+    },
+    {
+        "site_id": "001308C",
+        "site_name": "SFR_-_MARSEILLE_BOUTIQ",
+        "latitude": 43.30237521683799,
+        "longitude": 5.377435074172593,
+        "agents": [
+            {
+                "agent_name": "ABDALLAH",
+                "latitude": 43.3598,
+                "longitude": 5.3342
+            },
+            {
+                "agent_name": "AMMOURI",
+                "latitude": 43.4214885,
+                "longitude": 5.2202107
+            }
+        ]
+    },
+    {
+        "site_id": "Unknown",
+        "site_name": "Unknown",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "ABDALLAH RAMA",
+                "latitude": 45.737339,
+                "longitude": 4.8732922
+            },
+            {
+                "agent_name": "ADJOUMANI",
+                "latitude": 45.7755007,
+                "longitude": 4.9236974
+            },
+            {
+                "agent_name": "AGGOUN",
+                "latitude": 43.3186,
+                "longitude": 5.4084
+            },
+            {
+                "agent_name": "AKRICHE",
+                "latitude": 43.356501,
+                "longitude": 5.3608851
+            },
+            {
+                "agent_name": "ALCON",
+                "latitude": 45.3045,
+                "longitude": 5.0822
+            },
+            {
+                "agent_name": "AMRAOUI",
+                "latitude": 46.217342,
+                "longitude": 5.231525
+            },
+            {
+                "agent_name": "ANASSE",
+                "latitude": 45.7667,
+                "longitude": 4.8833
+            },
+            {
+                "agent_name": "ARDIZZONI",
+                "latitude": 43.5283,
+                "longitude": 5.4497
+            },
+            {
+                "agent_name": "ASTIER",
+                "latitude": 43.4199627,
+                "longitude": 5.2065258
+            },
+            {
+                "agent_name": "AVEROUS",
+                "latitude": 43.4864488,
+                "longitude": 5.2353829
+            },
+            {
+                "agent_name": "BAHITA",
+                "latitude": 43.3021728,
+                "longitude": 5.3702787
+            },
+            {
+                "agent_name": "BARBRY",
+                "latitude": 43.4535221,
+                "longitude": 5.964451
+            },
+            {
+                "agent_name": "BENFERHAT",
+                "latitude": 43.3023177,
+                "longitude": 5.3690275
+            },
+            {
+                "agent_name": "BENLAHCENE",
+                "latitude": 43.337525,
+                "longitude": 5.421181
+            },
+            {
+                "agent_name": "BERDA",
+                "latitude": 45.754539,
+                "longitude": 5.148971
+            },
+            {
+                "agent_name": "BOUANANI",
+                "latitude": 45.6332,
+                "longitude": 4.8546
+            },
+            {
+                "agent_name": "BOUGDADI",
+                "latitude": 45.7025,
+                "longitude": 4.8715
+            },
+            {
+                "agent_name": "BOUSSAIDI",
+                "latitude": 45.4736,
+                "longitude": 4.5254
+            },
+            {
+                "agent_name": "BRUN",
+                "latitude": 43.5924,
+                "longitude": 5.1317
+            },
+            {
+                "agent_name": "CARRON",
+                "latitude": 44.939304,
+                "longitude": 4.8935203
+            },
+            {
+                "agent_name": "CHAACHOUA",
+                "latitude": 43.46,
+                "longitude": 5.2486
+            },
+            {
+                "agent_name": "CHAPOLARD",
+                "latitude": 45.9036088,
+                "longitude": 4.8431734
+            },
+            {
+                "agent_name": "CORRAINI",
+                "latitude": 43.4846525,
+                "longitude": 5.415109
+            },
+            {
+                "agent_name": "COUDERC",
+                "latitude": 43.4114458,
+                "longitude": 5.2265775
+            },
+            {
+                "agent_name": "DERRIEN",
+                "latitude": 43.3805286,
+                "longitude": 5.350901
+            },
+            {
+                "agent_name": "DUBOS",
+                "latitude": 45.1439,
+                "longitude": 5.7288
+            },
+            {
+                "agent_name": "FALVARD",
+                "latitude": 45.8938847,
+                "longitude": 4.6356001
+            },
+            {
+                "agent_name": "FONMARTY",
+                "latitude": 45.7170134,
+                "longitude": 4.7862068
+            },
+            {
+                "agent_name": "GAUNY",
+                "latitude": 43.3722,
+                "longitude": 5.3539
+            },
+            {
+                "agent_name": "GENNESSEAUX COMTE",
+                "latitude": 45.823868,
+                "longitude": 4.922986
+            },
+            {
+                "agent_name": "GUEMAZ",
+                "latitude": 45.838318,
+                "longitude": 4.8241369
+            },
+            {
+                "agent_name": "GUITOUNI",
+                "latitude": 43.4104491,
+                "longitude": 5.0458574
+            },
+            {
+                "agent_name": "IMBERT",
+                "latitude": 43.5492569,
+                "longitude": 5.2210045
+            },
+            {
+                "agent_name": "IVANOVIC",
+                "latitude": 45.7118828,
+                "longitude": 4.8623875
+            },
+            {
+                "agent_name": "LAUZERAL",
+                "latitude": 43.5158995,
+                "longitude": 4.9756161
+            },
+            {
+                "agent_name": "LESDOS",
+                "latitude": 45.2644708,
+                "longitude": 6.3735249
+            },
+            {
+                "agent_name": "LUIZET",
+                "latitude": 45.485527,
+                "longitude": 4.808838
+            },
+            {
+                "agent_name": "MANCILLA CORTEZ",
+                "latitude": 45.7308428,
+                "longitude": 4.8612956
+            },
+            {
+                "agent_name": "MARNI",
+                "latitude": 43.3004016,
+                "longitude": 5.3785626
+            },
+            {
+                "agent_name": "MESSAI",
+                "latitude": 45.7751296,
+                "longitude": 4.8741536
+            },
+            {
+                "agent_name": "MOURGEON",
+                "latitude": 45.6098305,
+                "longitude": 4.7342004
+            },
+            {
+                "agent_name": "MOURIZ",
+                "latitude": 46.0615165,
+                "longitude": 4.4937925
+            },
+            {
+                "agent_name": "NGOLLE NGANKEP",
+                "latitude": 45.768148,
+                "longitude": 4.8740026
+            },
+            {
+                "agent_name": "NOUALI",
+                "latitude": 43.5281758,
+                "longitude": 5.2605627
+            },
+            {
+                "agent_name": "NOUGAT",
+                "latitude": 45.739585,
+                "longitude": 4.9255825
+            },
+            {
+                "agent_name": "OUATTARA",
+                "latitude": 43.5362493,
+                "longitude": 5.4089662
+            },
+            {
+                "agent_name": "PIERAGNOLI",
+                "latitude": 43.4041088,
+                "longitude": 5.0429365
+            },
+            {
+                "agent_name": "PLATON MARTINEZ",
+                "latitude": 43.43865,
+                "longitude": 6.07295
+            },
+            {
+                "agent_name": "POMA",
+                "latitude": 43.3389698,
+                "longitude": 5.348813
+            },
+            {
+                "agent_name": "POURROT",
+                "latitude": 43.416,
+                "longitude": 5.2145
+            },
+            {
+                "agent_name": "RAZAFIMAMONJY",
+                "latitude": 45.7039519,
+                "longitude": 4.8760952
+            },
+            {
+                "agent_name": "REMILI",
+                "latitude": 43.3088659,
+                "longitude": 5.3706156
+            },
+            {
+                "agent_name": "ROBILLON",
+                "latitude": 45.7676676,
+                "longitude": 3.1989569
+            },
+            {
+                "agent_name": "RODRIGUEZ",
+                "latitude": 43.4462302,
+                "longitude": 5.248957
+            },
+            {
+                "agent_name": "SAIF",
+                "latitude": 43.5304161,
+                "longitude": 5.4101364
+            },
+            {
+                "agent_name": "SECK",
+                "latitude": 45.9883637,
+                "longitude": 4.7098748
+            },
+            {
+                "agent_name": "SEGUER",
+                "latitude": 45.1667,
+                "longitude": 5.7167
+            },
+            {
+                "agent_name": "TAAZOUNT",
+                "latitude": 45.7678795,
+                "longitude": 5.0021627
+            },
+            {
+                "agent_name": "TIGHILT",
+                "latitude": 43.416,
+                "longitude": 5.2145
+            },
+            {
+                "agent_name": "TOLENTINO",
+                "latitude": 43.3025363,
+                "longitude": 5.4538221
+            },
+            {
+                "agent_name": "TOUAREF",
+                "latitude": 45.1435467,
+                "longitude": 5.6986013
+            },
+            {
+                "agent_name": "VORELLI",
+                "latitude": 43.7208019,
+                "longitude": 7.2504164
+            },
+            {
+                "agent_name": "WIECZOREK",
+                "latitude": 45.7302365,
+                "longitude": 5.0110894
+            },
+            {
+                "agent_name": "YAHIAOUI",
+                "latitude": 45.7612,
+                "longitude": 4.8518
+            }
+        ]
+    },
+    {
+        "site_id": "001905C",
+        "site_name": "AEROPORT_MARSEILLE_PROVENCE",
+        "latitude": 43.43860223281912,
+        "longitude": 5.214428816488766,
+        "agents": [
+            {
+                "agent_name": "ABDESSEMED",
+                "latitude": 43.5220443,
+                "longitude": 5.4334979
+            },
+            {
+                "agent_name": "ALVAREZ",
+                "latitude": 43.522048,
+                "longitude": 5.4340791
+            },
+            {
+                "agent_name": "BENOUALI",
+                "latitude": 43.3336377,
+                "longitude": 5.435517
+            },
+            {
+                "agent_name": "BERNARD",
+                "latitude": 43.482343,
+                "longitude": 5.42103
+            },
+            {
+                "agent_name": "BOUAKKAZ",
+                "latitude": 43.3251169,
+                "longitude": 5.4183984
+            },
+            {
+                "agent_name": "BOURICHA",
+                "latitude": 43.3056274,
+                "longitude": 5.3765757
+            },
+            {
+                "agent_name": "BOUSSAADA",
+                "latitude": 43.3555081,
+                "longitude": 5.3598363
+            },
+            {
+                "agent_name": "CABRERA CALZADA",
+                "latitude": 43.354253,
+                "longitude": 5.4269679
+            },
+            {
+                "agent_name": "CALLERI",
+                "latitude": 43.4585629,
+                "longitude": 5.2437126
+            },
+            {
+                "agent_name": "CAPOTOSTO",
+                "latitude": 43.2543,
+                "longitude": 5.4057
+            },
+            {
+                "agent_name": "CHEILAN",
+                "latitude": 43.4305942,
+                "longitude": 5.4420092
+            },
+            {
+                "agent_name": "CHEVASSU",
+                "latitude": 43.2695748,
+                "longitude": 5.4140349
+            },
+            {
+                "agent_name": "CHIHI",
+                "latitude": 43.3094946,
+                "longitude": 5.3750193
+            },
+            {
+                "agent_name": "COZZOLINO",
+                "latitude": 43.416,
+                "longitude": 5.2145
+            },
+            {
+                "agent_name": "FALCO",
+                "latitude": 43.46,
+                "longitude": 5.2486
+            },
+            {
+                "agent_name": "GASTEAUD",
+                "latitude": 43.5813357,
+                "longitude": 5.4167306
+            },
+            {
+                "agent_name": "GOURARI",
+                "latitude": 43.4214429,
+                "longitude": 5.2201028
+            },
+            {
+                "agent_name": "GUERINI",
+                "latitude": 43.2977577,
+                "longitude": 5.4470781
+            },
+            {
+                "agent_name": "MERZOUG",
+                "latitude": 43.285604,
+                "longitude": 5.4539827
+            },
+            {
+                "agent_name": "PARMENTIER",
+                "latitude": 43.5924,
+                "longitude": 5.1317
+            },
+            {
+                "agent_name": "RAFAEL",
+                "latitude": 43.4155014,
+                "longitude": 5.2102981
+            },
+            {
+                "agent_name": "RAHOU",
+                "latitude": 43.3249357,
+                "longitude": 5.4237901
+            },
+            {
+                "agent_name": "SAMMARI",
+                "latitude": 43.2889035,
+                "longitude": 5.3663742
+            },
+            {
+                "agent_name": "SCHINTU",
+                "latitude": 43.4238501,
+                "longitude": 5.2065184
+            },
+            {
+                "agent_name": "SUNSERI",
+                "latitude": 43.5924,
+                "longitude": 5.1317
+            },
+            {
+                "agent_name": "VELLA",
+                "latitude": 43.4092341,
+                "longitude": 5.5297249
+            }
+        ]
+    },
+    {
+        "site_id": "001861C",
+        "site_name": "TOUR_INCITY",
+        "latitude": 45.76342393085972,
+        "longitude": 4.850980264284896,
+        "agents": [
+            {
+                "agent_name": "ABDOU",
+                "latitude": 45.6674843,
+                "longitude": 4.8494778
+            },
+            {
+                "agent_name": "BENABDERRAHIM",
+                "latitude": 45.6961022,
+                "longitude": 4.8619569
+            },
+            {
+                "agent_name": "BIBI",
+                "latitude": 45.7762265,
+                "longitude": 4.8723996
+            },
+            {
+                "agent_name": "BICHARD",
+                "latitude": 45.9824337,
+                "longitude": 4.7152628
+            },
+            {
+                "agent_name": "BOUZIDI",
+                "latitude": 45.8211862,
+                "longitude": 4.835289
+            },
+            {
+                "agent_name": "DECRUZ",
+                "latitude": 45.7667,
+                "longitude": 4.8833
+            },
+            {
+                "agent_name": "FILLON",
+                "latitude": 45.6039809,
+                "longitude": 4.8180017
+            },
+            {
+                "agent_name": "FRIH",
+                "latitude": 45.7494255,
+                "longitude": 4.8494606
+            },
+            {
+                "agent_name": "KABOUI",
+                "latitude": 45.7365657,
+                "longitude": 4.7648547
+            },
+            {
+                "agent_name": "LALEYE",
+                "latitude": 45.7497049,
+                "longitude": 4.8630558
+            },
+            {
+                "agent_name": "MATUTI NGINDA",
+                "latitude": 45.7331747,
+                "longitude": 4.863523
+            },
+            {
+                "agent_name": "MICHELET",
+                "latitude": 45.7058141,
+                "longitude": 4.8198892
+            },
+            {
+                "agent_name": "NDONG",
+                "latitude": 45.7540317,
+                "longitude": 4.8427949
+            },
+            {
+                "agent_name": "PELLIGAND",
+                "latitude": 46.2524765,
+                "longitude": 5.2079832
+            },
+            {
+                "agent_name": "PORTE",
+                "latitude": 45.7520182,
+                "longitude": 4.8713903
+            },
+            {
+                "agent_name": "PROMONET",
+                "latitude": 45.7607983,
+                "longitude": 4.8968931
+            },
+            {
+                "agent_name": "SEGGANI",
+                "latitude": 45.700267,
+                "longitude": 4.8621577
+            },
+            {
+                "agent_name": "THIAM",
+                "latitude": 45.7917509,
+                "longitude": 4.8103842
+            }
+        ]
+    },
+    {
+        "site_id": "000647C",
+        "site_name": "BNP_PARIBAS_-_L'ARC",
+        "latitude": 45.75944506263456,
+        "longitude": 4.855683496881291,
+        "agents": [
+            {
+                "agent_name": "ABOURIZK",
+                "latitude": 45.7479999,
+                "longitude": 4.8644966
+            },
+            {
+                "agent_name": "ILORI",
+                "latitude": 45.6962356,
+                "longitude": 4.9419084
+            }
+        ]
+    },
+    {
+        "site_id": "000053C",
+        "site_name": "CA_SRA_GRENOBLE",
+        "latitude": 45.20648044824171,
+        "longitude": 5.7000401072654165,
+        "agents": [
+            {
+                "agent_name": "ADJOBI",
+                "latitude": 45.1754497,
+                "longitude": 5.7428928
+            },
+            {
+                "agent_name": "BOUCHAMA",
+                "latitude": 45.2016608,
+                "longitude": 5.7060492
+            },
+            {
+                "agent_name": "KONE",
+                "latitude": 45.170491,
+                "longitude": 5.75973984
+            },
+            {
+                "agent_name": "SELIM",
+                "latitude": 45.223818,
+                "longitude": 5.6899214
+            },
+            {
+                "agent_name": "WAECKEL",
+                "latitude": 45.1799672,
+                "longitude": 5.6884801
+            }
+        ]
+    },
+    {
+        "site_id": "001594C",
+        "site_name": "LYONDELLBASELL",
+        "latitude": 43.49625535509231,
+        "longitude": 5.174539557405414,
+        "agents": [
+            {
+                "agent_name": "AGUELI",
+                "latitude": 43.3885752,
+                "longitude": 5.3521804
+            },
+            {
+                "agent_name": "ALLOUACHE",
+                "latitude": 43.337231,
+                "longitude": 5.3556998
+            },
+            {
+                "agent_name": "AMADOR",
+                "latitude": 43.4175336,
+                "longitude": 5.2246352
+            },
+            {
+                "agent_name": "ANIORTE",
+                "latitude": 43.4213135,
+                "longitude": 5.2101095
+            },
+            {
+                "agent_name": "ATTAL",
+                "latitude": 43.4200915,
+                "longitude": 5.2255035
+            },
+            {
+                "agent_name": "BAKHOUCHE",
+                "latitude": 43.4838809,
+                "longitude": 5.1672383
+            },
+            {
+                "agent_name": "BARBARIA",
+                "latitude": 43.3819293,
+                "longitude": 5.1793103
+            },
+            {
+                "agent_name": "BEGUEDOU",
+                "latitude": 43.5508686,
+                "longitude": 5.1958989
+            },
+            {
+                "agent_name": "BENMAHAMED",
+                "latitude": 43.4169593,
+                "longitude": 5.2041071
+            },
+            {
+                "agent_name": "BENTITALLAH",
+                "latitude": 43.5924,
+                "longitude": 5.1317
+            },
+            {
+                "agent_name": "BERIDOT",
+                "latitude": 43.4252612,
+                "longitude": 5.2050092
+            },
+            {
+                "agent_name": "BERTHOU",
+                "latitude": 43.3365777,
+                "longitude": 5.1497245
+            },
+            {
+                "agent_name": "BIHAN",
+                "latitude": 43.4178566,
+                "longitude": 5.2207438
+            },
+            {
+                "agent_name": "BIHAN",
+                "latitude": 43.4178566,
+                "longitude": 5.2207438
+            },
+            {
+                "agent_name": "BOINA",
+                "latitude": 43.46,
+                "longitude": 5.2486
+            },
+            {
+                "agent_name": "BOUABBASSE",
+                "latitude": 43.4933632,
+                "longitude": 5.1534885
+            },
+            {
+                "agent_name": "BUSSOLARO",
+                "latitude": 43.5538166,
+                "longitude": 5.0333176
+            },
+            {
+                "agent_name": "CASANOVA",
+                "latitude": 43.4159279,
+                "longitude": 4.988721
+            },
+            {
+                "agent_name": "CASTALDO",
+                "latitude": 43.4753402,
+                "longitude": 5.1686995
+            },
+            {
+                "agent_name": "CHARDIN",
+                "latitude": 43.6391091,
+                "longitude": 5.0525312
+            },
+            {
+                "agent_name": "CHAURY",
+                "latitude": 43.4864488,
+                "longitude": 5.2353829
+            },
+            {
+                "agent_name": "COSME",
+                "latitude": 43.395473,
+                "longitude": 5.2552552
+            },
+            {
+                "agent_name": "COSSENET",
+                "latitude": 43.3577453,
+                "longitude": 5.1944675
+            },
+            {
+                "agent_name": "DE TORRES",
+                "latitude": 43.4897294,
+                "longitude": 5.2237045
+            },
+            {
+                "agent_name": "DESMET",
+                "latitude": 43.6628925,
+                "longitude": 5.089353
+            },
+            {
+                "agent_name": "DUCAMIN",
+                "latitude": 43.5147962,
+                "longitude": 5.2144345
+            },
+            {
+                "agent_name": "DUPRAT",
+                "latitude": 43.3478398,
+                "longitude": 5.3617623
+            },
+            {
+                "agent_name": "EL KECHAI",
+                "latitude": 43.6458523,
+                "longitude": 5.0913303
+            },
+            {
+                "agent_name": "EL YOUSSEFI",
+                "latitude": 43.4155832,
+                "longitude": 5.2083263
+            },
+            {
+                "agent_name": "ELGHERS",
+                "latitude": 43.4800963,
+                "longitude": 5.1726152
+            },
+            {
+                "agent_name": "FERRER",
+                "latitude": 43.46,
+                "longitude": 5.2486
+            },
+            {
+                "agent_name": "FLEURBE",
+                "latitude": 43.594775,
+                "longitude": 4.9957574
+            },
+            {
+                "agent_name": "GHALMI",
+                "latitude": 43.4007325,
+                "longitude": 5.2198684
+            },
+            {
+                "agent_name": "GONZALEZ",
+                "latitude": 43.5067165,
+                "longitude": 4.9902652
+            },
+            {
+                "agent_name": "GUEYE",
+                "latitude": 43.6458523,
+                "longitude": 5.0913303
+            },
+            {
+                "agent_name": "HAMANI",
+                "latitude": 43.4947809,
+                "longitude": 5.1547251
+            },
+            {
+                "agent_name": "JENDOUBI",
+                "latitude": 43.491283,
+                "longitude": 5.1680558
+            },
+            {
+                "agent_name": "LAUZERAL",
+                "latitude": 43.4983457,
+                "longitude": 4.9682383
+            },
+            {
+                "agent_name": "LHERBIER",
+                "latitude": 43.4025264,
+                "longitude": 5.1182022
+            },
+            {
+                "agent_name": "LOPES",
+                "latitude": 43.46,
+                "longitude": 5.2486
+            },
+            {
+                "agent_name": "MERIBOUTE",
+                "latitude": 43.3234295,
+                "longitude": 5.364716
+            },
+            {
+                "agent_name": "MILJEVIC",
+                "latitude": 43.4380587,
+                "longitude": 5.2569955
+            },
+            {
+                "agent_name": "MORENO",
+                "latitude": 43.6478082,
+                "longitude": 5.0994663
+            },
+            {
+                "agent_name": "NOUBLI",
+                "latitude": 43.4748937,
+                "longitude": 5.168216
+            },
+            {
+                "agent_name": "NOURRY",
+                "latitude": 43.5543053,
+                "longitude": 5.031556
+            },
+            {
+                "agent_name": "OLIVIER",
+                "latitude": 43.5124202,
+                "longitude": 4.9663955
+            },
+            {
+                "agent_name": "OUNDJIAN",
+                "latitude": 43.3104887,
+                "longitude": 5.4425103
+            },
+            {
+                "agent_name": "PALMIERI",
+                "latitude": 43.5089108,
+                "longitude": 5.4918988
+            },
+            {
+                "agent_name": "PARISOT",
+                "latitude": 43.38535,
+                "longitude": 5.220942
+            },
+            {
+                "agent_name": "PEREZ",
+                "latitude": 46.8656,
+                "longitude": 4.18988
+            },
+            {
+                "agent_name": "PIERRETTE",
+                "latitude": 43.4576129,
+                "longitude": 5.2456798
+            },
+            {
+                "agent_name": "ROMERO ROMERO",
+                "latitude": 43.5667,
+                "longitude": 5.0667
+            },
+            {
+                "agent_name": "RUIZ",
+                "latitude": 43.5158245,
+                "longitude": 4.9881338
+            },
+            {
+                "agent_name": "TALBOT",
+                "latitude": 43.416,
+                "longitude": 5.2145
+            },
+            {
+                "agent_name": "TCHERODJI",
+                "latitude": 43.3552304,
+                "longitude": 5.361143
+            },
+            {
+                "agent_name": "TUMBARELLO",
+                "latitude": 43.5600041,
+                "longitude": 5.2559692
+            },
+            {
+                "agent_name": "VALENTE",
+                "latitude": 43.3955724,
+                "longitude": 5.2377418
+            },
+            {
+                "agent_name": "VIAL",
+                "latitude": 43.6347477,
+                "longitude": 5.1017275
+            },
+            {
+                "agent_name": "VICQ",
+                "latitude": 43.31061,
+                "longitude": 5.4020081
+            },
+            {
+                "agent_name": "VINGADACHETTY",
+                "latitude": 43.46,
+                "longitude": 5.2486
+            },
+            {
+                "agent_name": "WAMBA",
+                "latitude": 43.4168241,
+                "longitude": 5.213206
+            },
+            {
+                "agent_name": "YRIARTE",
+                "latitude": 43.4881861,
+                "longitude": 5.221919
+            },
+            {
+                "agent_name": "ZEGGAI",
+                "latitude": 43.522048,
+                "longitude": 5.4340791
+            }
+        ]
+    },
+    {
+        "site_id": "001512C",
+        "site_name": "TOTAL_-_PLV",
+        "latitude": 43.413425029633615,
+        "longitude": 5.21844190644428,
+        "agents": [
+            {
+                "agent_name": "AHOUNOU",
+                "latitude": 45.3229392,
+                "longitude": 4.9957393
+            },
+            {
+                "agent_name": "DANTAS",
+                "latitude": 44.9305031,
+                "longitude": 4.8949696
+            },
+            {
+                "agent_name": "THEISS",
+                "latitude": 45.0360614,
+                "longitude": 5.0446041
+            }
+        ]
+    },
+    {
+        "site_id": "001022C",
+        "site_name": "TOTAL_ACS_GIVORS",
+        "latitude": 45.591243664391264,
+        "longitude": 4.7747803687955965,
+        "agents": [
+            {
+                "agent_name": "AIBA",
+                "latitude": 45.6023809,
+                "longitude": 4.7626469
+            },
+            {
+                "agent_name": "BONY",
+                "latitude": 45.5518724,
+                "longitude": 4.7159409
+            },
+            {
+                "agent_name": "DOUFFI",
+                "latitude": 45.6903293,
+                "longitude": 4.8244395
+            },
+            {
+                "agent_name": "PERRET",
+                "latitude": 45.4264692,
+                "longitude": 4.3114618
+            },
+            {
+                "agent_name": "TLIBA",
+                "latitude": 45.55,
+                "longitude": 4.8
+            }
+        ]
+    },
+    {
+        "site_id": "000923C",
+        "site_name": "ARKEMA_PIERRE_BENITE_USINE",
+        "latitude": 45.70790759280523,
+        "longitude": 4.825889486393271,
+        "agents": [
+            {
+                "agent_name": "AILANE",
+                "latitude": 45.736045,
+                "longitude": 4.6580639
+            },
+            {
+                "agent_name": "BEZEGHICHE",
+                "latitude": 45.6133724,
+                "longitude": 4.6759602
+            },
+            {
+                "agent_name": "BOUTRIG",
+                "latitude": 45.732343,
+                "longitude": 4.7812688
+            },
+            {
+                "agent_name": "BRAHMI",
+                "latitude": 45.7447408,
+                "longitude": 4.8513434
+            },
+            {
+                "agent_name": "DEDINGER",
+                "latitude": 45.6332,
+                "longitude": 4.8546
+            },
+            {
+                "agent_name": "DUMAY MUDAY",
+                "latitude": 45.7041142,
+                "longitude": 4.8155348
+            },
+            {
+                "agent_name": "ESCANDE",
+                "latitude": 45.467818,
+                "longitude": 4.942813
+            },
+            {
+                "agent_name": "FRIDRICH",
+                "latitude": 45.693503,
+                "longitude": 4.8624717
+            },
+            {
+                "agent_name": "JACQUET",
+                "latitude": 45.6215095,
+                "longitude": 4.7486074
+            },
+            {
+                "agent_name": "KEBIR",
+                "latitude": 45.7025,
+                "longitude": 4.8715
+            },
+            {
+                "agent_name": "KOHLER",
+                "latitude": 45.7107983,
+                "longitude": 4.8602597
+            },
+            {
+                "agent_name": "LAMBERT",
+                "latitude": 45.7916292,
+                "longitude": 4.8638875
+            },
+            {
+                "agent_name": "MERBOUH",
+                "latitude": 45.7665899,
+                "longitude": 4.8008511
+            },
+            {
+                "agent_name": "SAINT ANDRE",
+                "latitude": 45.535809,
+                "longitude": 4.85615
+            },
+            {
+                "agent_name": "TASTET",
+                "latitude": 45.7553015,
+                "longitude": 4.9322566
+            },
+            {
+                "agent_name": "YILMAZ",
+                "latitude": 45.6049978,
+                "longitude": 4.7615233
+            }
+        ]
+    },
+    {
+        "site_id": "001538C",
+        "site_name": "FEDEX_-_MIONS",
+        "latitude": 45.6757031902881,
+        "longitude": 4.933828654684392,
+        "agents": [
+            {
+                "agent_name": "AISSAOUI",
+                "latitude": 45.7878153,
+                "longitude": 4.800742
+            },
+            {
+                "agent_name": "COLOMBIER",
+                "latitude": 45.39477980668673,
+                "longitude": 4.774679204362712
+            },
+            {
+                "agent_name": "DIBRANI",
+                "latitude": 45.8167,
+                "longitude": 4.9
+            },
+            {
+                "agent_name": "MAGNA",
+                "latitude": 45.7440847,
+                "longitude": 4.8590971
+            },
+            {
+                "agent_name": "PEMOKA",
+                "latitude": 45.7643362,
+                "longitude": 4.8885815
+            }
+        ]
+    },
+    {
+        "site_id": "001810C",
+        "site_name": "GL_EVENTS_CONFLUENCE",
+        "latitude": 45.73385503282358,
+        "longitude": 4.816009654015615,
+        "agents": [
+            {
+                "agent_name": "AISSAOUI",
+                "latitude": 45.727951,
+                "longitude": 4.8885108
+            },
+            {
+                "agent_name": "DELOYE",
+                "latitude": 45.7574881,
+                "longitude": 4.7791436
+            },
+            {
+                "agent_name": "LOUAH",
+                "latitude": 45.7393495,
+                "longitude": 4.7149301
+            }
+        ]
+    },
+    {
+        "site_id": "001065C",
+        "site_name": "CPAM_-_LYON_JEAN_MACE",
+        "latitude": 45.74621487447421,
+        "longitude": 4.843138663703427,
+        "agents": [
+            {
+                "agent_name": "AIT AMER",
+                "latitude": 45.758441,
+                "longitude": 4.7790584
+            },
+            {
+                "agent_name": "AMESRAR",
+                "latitude": 45.725838,
+                "longitude": 4.870934
+            },
+            {
+                "agent_name": "EL HARIS",
+                "latitude": 45.7025,
+                "longitude": 4.8715
+            },
+            {
+                "agent_name": "NGUE",
+                "latitude": 45.7881403,
+                "longitude": 4.7893153
+            }
+        ]
+    },
+    {
+        "site_id": "001798C",
+        "site_name": "BNP_-_PLAINE_DE_L_AIN",
+        "latitude": 45.84423249600398,
+        "longitude": 5.274839497302883,
+        "agents": [
+            {
+                "agent_name": "ALCINA",
+                "latitude": 45.6796,
+                "longitude": 5.2198
+            },
+            {
+                "agent_name": "GIAIOURAS",
+                "latitude": 45.7503716,
+                "longitude": 5.203899
+            },
+            {
+                "agent_name": "NALY",
+                "latitude": 45.90038,
+                "longitude": 5.3466
+            },
+            {
+                "agent_name": "TARTAGLIONE",
+                "latitude": 46.2024555,
+                "longitude": 5.2286166
+            }
+        ]
+    },
+    {
+        "site_id": "001061C",
+        "site_name": "CPAM_-_VILLEURBANNE",
+        "latitude": 45.76712732670184,
+        "longitude": 4.892649844534103,
+        "agents": [
+            {
+                "agent_name": "ALI ABOU ABASSE",
+                "latitude": 45.7870709,
+                "longitude": 4.8085212
+            },
+            {
+                "agent_name": "DUBOIS",
+                "latitude": 45.7607997,
+                "longitude": 4.9232276
+            },
+            {
+                "agent_name": "KATAMBA",
+                "latitude": 45.7635618,
+                "longitude": 4.8531039
+            },
+            {
+                "agent_name": "LADMI",
+                "latitude": 45.7575049,
+                "longitude": 4.8720694
+            },
+            {
+                "agent_name": "TOUCHENI",
+                "latitude": 45.7025,
+                "longitude": 4.8715
+            }
+        ]
+    },
+    {
+        "site_id": "001782C",
+        "site_name": "BA_AMBERIEUX_EN_BUGEY",
+        "latitude": 45.97347684704165,
+        "longitude": 5.342255323904331,
+        "agents": [
+            {
+                "agent_name": "ALLOUCHERY",
+                "latitude": 45.95164,
+                "longitude": 5.329407
+            },
+            {
+                "agent_name": "AUBERTIN",
+                "latitude": 46.034461,
+                "longitude": 5.5981775
+            },
+            {
+                "agent_name": "AUROY",
+                "latitude": 45.969984,
+                "longitude": 5.348792
+            },
+            {
+                "agent_name": "BARRILLOT",
+                "latitude": 46.0433811,
+                "longitude": 5.412282
+            },
+            {
+                "agent_name": "BEN IKHELEF",
+                "latitude": 45.9584245,
+                "longitude": 5.3360197
+            },
+            {
+                "agent_name": "BEURIER",
+                "latitude": 45.872356,
+                "longitude": 5.385729
+            },
+            {
+                "agent_name": "BROCARD",
+                "latitude": 46.0924454,
+                "longitude": 5.4290603
+            },
+            {
+                "agent_name": "CASTOR",
+                "latitude": 45.956498,
+                "longitude": 5.367854
+            },
+            {
+                "agent_name": "CHARDON",
+                "latitude": 46.1895229,
+                "longitude": 5.2094396
+            },
+            {
+                "agent_name": "COCHET",
+                "latitude": 46.195392,
+                "longitude": 5.210126
+            },
+            {
+                "agent_name": "COMPIGNE",
+                "latitude": 46.02193,
+                "longitude": 4.99117
+            },
+            {
+                "agent_name": "CORTAZAR",
+                "latitude": 46.2348844,
+                "longitude": 5.130891
+            },
+            {
+                "agent_name": "DURAN",
+                "latitude": 45.9642125,
+                "longitude": 5.3210446
+            },
+            {
+                "agent_name": "FOLLIAT",
+                "latitude": 46.2289013,
+                "longitude": 5.4250655
+            },
+            {
+                "agent_name": "GIOVE",
+                "latitude": 46.03976,
+                "longitude": 5.41328
+            },
+            {
+                "agent_name": "HAERTTER",
+                "latitude": 45.95885,
+                "longitude": 5.3432
+            },
+            {
+                "agent_name": "HUARD",
+                "latitude": 45.9257499,
+                "longitude": 5.5049324
+            },
+            {
+                "agent_name": "KADDOURI",
+                "latitude": 45.97473,
+                "longitude": 5.24799
+            },
+            {
+                "agent_name": "KLETKE",
+                "latitude": 46.0266554,
+                "longitude": 5.3052511
+            },
+            {
+                "agent_name": "LAVIEVILLE",
+                "latitude": 45.929468,
+                "longitude": 5.520301
+            },
+            {
+                "agent_name": "LOUIS",
+                "latitude": 45.9981336,
+                "longitude": 5.0367454
+            },
+            {
+                "agent_name": "MAMEAUX",
+                "latitude": 45.9569547,
+                "longitude": 5.3506945
+            },
+            {
+                "agent_name": "MARGERIT",
+                "latitude": 45.957003,
+                "longitude": 5.342286
+            },
+            {
+                "agent_name": "MAZINGANT",
+                "latitude": 45.8322229,
+                "longitude": 5.4045772
+            },
+            {
+                "agent_name": "MESSERLI",
+                "latitude": 46.0836491,
+                "longitude": 5.4652573
+            },
+            {
+                "agent_name": "MORCEAU",
+                "latitude": 45.9614737,
+                "longitude": 5.3016068
+            },
+            {
+                "agent_name": "PELLISE",
+                "latitude": 45.90038,
+                "longitude": 5.3466
+            },
+            {
+                "agent_name": "RAGOT",
+                "latitude": 45.95885,
+                "longitude": 5.3432
+            },
+            {
+                "agent_name": "ROY TODESCHINI",
+                "latitude": 46.0514742,
+                "longitude": 5.2222341
+            },
+            {
+                "agent_name": "SANTACREU",
+                "latitude": 45.9324858,
+                "longitude": 5.4938928
+            },
+            {
+                "agent_name": "SANTIAGO",
+                "latitude": 46.1907857,
+                "longitude": 5.2877364
+            },
+            {
+                "agent_name": "TRICHARD",
+                "latitude": 46.1336203,
+                "longitude": 5.2625779
+            },
+            {
+                "agent_name": "VANDEZANDE",
+                "latitude": 45.955251,
+                "longitude": 5.327676
+            }
+        ]
+    },
+    {
+        "site_id": "001338C",
+        "site_name": "GL_EVENTS_EUREXPO",
+        "latitude": 45.7311717918308,
+        "longitude": 4.95147115309663,
+        "agents": [
+            {
+                "agent_name": "AMCHECH",
+                "latitude": 45.7708387,
+                "longitude": 4.9387975
+            },
+            {
+                "agent_name": "BARRY GANDHI",
+                "latitude": 46.5871533,
+                "longitude": 0.3611147
+            },
+            {
+                "agent_name": "BIHONDA",
+                "latitude": 45.7611,
+                "longitude": 4.8268
+            },
+            {
+                "agent_name": "CHOMAT",
+                "latitude": 45.9149,
+                "longitude": 4.6815
+            },
+            {
+                "agent_name": "DINI",
+                "latitude": 45.6997008,
+                "longitude": 4.8213686
+            },
+            {
+                "agent_name": "KHEBBAB",
+                "latitude": 45.7254524,
+                "longitude": 4.8915491
+            },
+            {
+                "agent_name": "LASSOULI",
+                "latitude": 45.652531,
+                "longitude": 4.815428
+            },
+            {
+                "agent_name": "LIBERMAN",
+                "latitude": 45.7463736,
+                "longitude": 4.8737641
+            },
+            {
+                "agent_name": "MARA",
+                "latitude": 45.7353415,
+                "longitude": 4.8765112
+            },
+            {
+                "agent_name": "MEDJANI",
+                "latitude": 45.7539309,
+                "longitude": 4.9090579
+            },
+            {
+                "agent_name": "MEKAOUI",
+                "latitude": 45.7812347,
+                "longitude": 4.920737
+            },
+            {
+                "agent_name": "PARIS",
+                "latitude": 45.7440633,
+                "longitude": 4.837491
+            },
+            {
+                "agent_name": "PAYET",
+                "latitude": 46.0014237,
+                "longitude": 5.0357313
+            },
+            {
+                "agent_name": "SAOUD",
+                "latitude": 45.7887347,
+                "longitude": 4.920914
+            },
+            {
+                "agent_name": "TIRYAKI",
+                "latitude": 45.9870207,
+                "longitude": 4.7175728
+            }
+        ]
+    },
+    {
+        "site_id": "000900C",
+        "site_name": "MARKEM_IMAJE",
+        "latitude": 44.97148105547559,
+        "longitude": 4.896956067403623,
+        "agents": [
+            {
+                "agent_name": "ANTOLINI",
+                "latitude": 44.8830416,
+                "longitude": 4.849532
+            },
+            {
+                "agent_name": "ANTOULY",
+                "latitude": 44.8262244,
+                "longitude": 4.6624034
+            },
+            {
+                "agent_name": "CAFFIN",
+                "latitude": 45.0402796,
+                "longitude": 5.0499625
+            },
+            {
+                "agent_name": "DOMONT",
+                "latitude": 44.9766603,
+                "longitude": 5.1029706
+            },
+            {
+                "agent_name": "GONCALVES",
+                "latitude": 45.1395603,
+                "longitude": 4.817744
+            },
+            {
+                "agent_name": "ROMAIN",
+                "latitude": 45.0096123,
+                "longitude": 4.9310652
+            }
+        ]
+    },
+    {
+        "site_id": "001537C",
+        "site_name": "FEDEX_-_PIERRE_BENITE",
+        "latitude": 45.70023061721247,
+        "longitude": 4.835019706864686,
+        "agents": [
+            {
+                "agent_name": "AOUF",
+                "latitude": 45.7298776,
+                "longitude": 4.8383634
+            },
+            {
+                "agent_name": "DIBRANI",
+                "latitude": 45.7616051,
+                "longitude": 4.7994458
+            },
+            {
+                "agent_name": "HERIF",
+                "latitude": 45.7667,
+                "longitude": 4.8833
+            },
+            {
+                "agent_name": "SARR",
+                "latitude": 45.7326007,
+                "longitude": 4.8368211
+            },
+            {
+                "agent_name": "ZIANI CHERIF",
+                "latitude": 45.6923877,
+                "longitude": 4.8970502
+            }
+        ]
+    },
+    {
+        "site_id": "001807C",
+        "site_name": "FEDEX_-_MARIGNANE",
+        "latitude": 43.44750421408487,
+        "longitude": 5.217852414332922,
+        "agents": [
+            {
+                "agent_name": "ARAB",
+                "latitude": 43.3186,
+                "longitude": 5.4084
+            },
+            {
+                "agent_name": "LAPEYRE",
+                "latitude": 43.5529884,
+                "longitude": 5.2244076
+            }
+        ]
+    },
+    {
+        "site_id": "000054C",
+        "site_name": "CA_SRA_PRIVAS",
+        "latitude": 44.73497225537039,
+        "longitude": 4.599964129528865,
+        "agents": [
+            {
+                "agent_name": "AURANGE",
+                "latitude": 44.7362062,
+                "longitude": 4.5800229
+            }
+        ]
+    },
+    {
+        "site_id": "001571C",
+        "site_name": "AIR_LIQUIDE",
+        "latitude": 45.22035294153744,
+        "longitude": 5.661592821367439,
+        "agents": [
+            {
+                "agent_name": "AZZOUZ",
+                "latitude": 45.1967847,
+                "longitude": 5.6839934
+            },
+            {
+                "agent_name": "BUSATTA",
+                "latitude": 45.0654137,
+                "longitude": 5.6696455
+            },
+            {
+                "agent_name": "FRUSTEC",
+                "latitude": 45.440703,
+                "longitude": 5.330021
+            },
+            {
+                "agent_name": "OULD CHIKR",
+                "latitude": 45.2913996,
+                "longitude": 5.6433486
+            }
+        ]
+    },
+    {
+        "site_id": "000892S",
+        "site_name": "CCCL_SECURITE_-GL_EVENTS_-_PS",
+        "latitude": 45.78547757703771,
+        "longitude": 4.854607977210288,
+        "agents": [
+            {
+                "agent_name": "BABY",
+                "latitude": 45.7787517,
+                "longitude": 4.8615353
+            },
+            {
+                "agent_name": "TOURE",
+                "latitude": 45.7653674,
+                "longitude": 4.8787851
+            }
+        ]
+    },
+    {
+        "site_id": "000893C",
+        "site_name": "VOS_LOGISTICS",
+        "latitude": 45.69920428095253,
+        "longitude": 4.846626412616555,
+        "agents": [
+            {
+                "agent_name": "BAGDU",
+                "latitude": 45.7602495,
+                "longitude": 5.0634094
+            }
+        ]
+    },
+    {
+        "site_id": "001855C",
+        "site_name": "TOUR_TO_LYON",
+        "latitude": 45.75927506675402,
+        "longitude": 4.858696777409631,
+        "agents": [
+            {
+                "agent_name": "BALLIEUX",
+                "latitude": 46.0032518,
+                "longitude": 5.0410321
+            },
+            {
+                "agent_name": "COQUELIN",
+                "latitude": 45.9769277,
+                "longitude": 5.3501224
+            },
+            {
+                "agent_name": "DEL CAMPO",
+                "latitude": 45.60835,
+                "longitude": 4.81024
+            },
+            {
+                "agent_name": "FRATELLO",
+                "latitude": 45.7703525,
+                "longitude": 4.959085
+            },
+            {
+                "agent_name": "JEBARI",
+                "latitude": 45.6254213,
+                "longitude": 5.137583
+            },
+            {
+                "agent_name": "MIERZWINSKI BOTELLA",
+                "latitude": 45.8415862,
+                "longitude": 4.6517128
+            }
+        ]
+    },
+    {
+        "site_id": "001712C",
+        "site_name": "ORANGE_MARSEILLE",
+        "latitude": 43.29641483996674,
+        "longitude": 5.377002480640733,
+        "agents": [
+            {
+                "agent_name": "BARCELO GIORGI",
+                "latitude": 43.3818055,
+                "longitude": 5.357887
+            },
+            {
+                "agent_name": "MANNINI",
+                "latitude": 43.2920136,
+                "longitude": 5.3841402
+            }
+        ]
+    },
+    {
+        "site_id": "001924S",
+        "site_name": "UCBL_-_LYON_-_PS",
+        "latitude": 45.7414999826738,
+        "longitude": 4.881133625301765,
+        "agents": [
+            {
+                "agent_name": "BARDACHENE",
+                "latitude": 45.7502306,
+                "longitude": 4.8739199
+            }
+        ]
+    },
+    {
+        "site_id": "001240C",
+        "site_name": "ATELIER_INDUSTRIEL_A\u00c9RONAUTIQU",
+        "latitude": 45.77849463171791,
+        "longitude": 3.167478487165247,
+        "agents": [
+            {
+                "agent_name": "BARICHARD",
+                "latitude": 46.0741069,
+                "longitude": 3.3751832
+            },
+            {
+                "agent_name": "BOUTERIGE BRIVADY",
+                "latitude": 45.7720697,
+                "longitude": 3.2842508
+            },
+            {
+                "agent_name": "BOUVET",
+                "latitude": 45.9011893,
+                "longitude": 3.2216961
+            },
+            {
+                "agent_name": "BRUGHEAT",
+                "latitude": 45.7939891,
+                "longitude": 3.5248712
+            },
+            {
+                "agent_name": "COLLAY",
+                "latitude": 45.718795,
+                "longitude": 3.611704
+            },
+            {
+                "agent_name": "DESMET",
+                "latitude": 45.8145,
+                "longitude": 3.1872
+            },
+            {
+                "agent_name": "DIAS",
+                "latitude": 45.7687348,
+                "longitude": 3.1868789
+            },
+            {
+                "agent_name": "FONTAINE",
+                "latitude": 45.8068111,
+                "longitude": 3.0088148
+            },
+            {
+                "agent_name": "GONIN",
+                "latitude": 46.0757185,
+                "longitude": 3.2743007
+            },
+            {
+                "agent_name": "HANYSZ",
+                "latitude": 45.4301119,
+                "longitude": 3.3053799
+            },
+            {
+                "agent_name": "RELU",
+                "latitude": 46.1852,
+                "longitude": 2.8873
+            },
+            {
+                "agent_name": "RIMBERT",
+                "latitude": 45.7375643,
+                "longitude": 3.1453579
+            },
+            {
+                "agent_name": "ROESCH",
+                "latitude": 45.6934,
+                "longitude": 3.3118
+            },
+            {
+                "agent_name": "SAVANIER",
+                "latitude": 45.4149428,
+                "longitude": 3.2847603
+            },
+            {
+                "agent_name": "SOURDY",
+                "latitude": 45.7840489,
+                "longitude": 3.0168916
+            },
+            {
+                "agent_name": "VEE",
+                "latitude": 45.9184473,
+                "longitude": 3.0689717
+            },
+            {
+                "agent_name": "VUCINIC",
+                "latitude": 45.7082539,
+                "longitude": 3.1761792
+            }
+        ]
+    },
+    {
+        "site_id": "001327C",
+        "site_name": "TOTAL_-_LA_MEDE",
+        "latitude": 43.39689917131767,
+        "longitude": 5.1015319524378056,
+        "agents": [
+            {
+                "agent_name": "BELKHEIR",
+                "latitude": 43.405614,
+                "longitude": 5.0539472
+            },
+            {
+                "agent_name": "BENYAHIA",
+                "latitude": 43.493693,
+                "longitude": 4.981656
+            },
+            {
+                "agent_name": "BOURICHA",
+                "latitude": 43.2961,
+                "longitude": 5.4362
+            },
+            {
+                "agent_name": "CAMPISI",
+                "latitude": 43.3159911,
+                "longitude": 5.4018008
+            },
+            {
+                "agent_name": "CASANO",
+                "latitude": 43.4007325,
+                "longitude": 5.2198684
+            },
+            {
+                "agent_name": "CORTES",
+                "latitude": 43.4377,
+                "longitude": 4.9446
+            },
+            {
+                "agent_name": "COULANJON",
+                "latitude": 43.4274194,
+                "longitude": 5.2765275
+            },
+            {
+                "agent_name": "DAAS",
+                "latitude": 43.3161096,
+                "longitude": 5.4038277
+            },
+            {
+                "agent_name": "DAMANCE",
+                "latitude": 43.3074708,
+                "longitude": 5.4195492
+            },
+            {
+                "agent_name": "DEFIVES",
+                "latitude": 43.5011878,
+                "longitude": 4.9737223
+            },
+            {
+                "agent_name": "DELGRANGE",
+                "latitude": 43.4480519,
+                "longitude": 5.2430595
+            },
+            {
+                "agent_name": "DJAHMI",
+                "latitude": 43.2990757,
+                "longitude": 5.3671652
+            },
+            {
+                "agent_name": "DURAN",
+                "latitude": 43.5167,
+                "longitude": 4.9833
+            },
+            {
+                "agent_name": "FERNANDEZ",
+                "latitude": 43.4583319,
+                "longitude": 4.9325686
+            },
+            {
+                "agent_name": "FERRATI",
+                "latitude": 43.4079049,
+                "longitude": 5.0428625
+            },
+            {
+                "agent_name": "GASMI",
+                "latitude": 43.2914885,
+                "longitude": 5.3828318
+            },
+            {
+                "agent_name": "GHERIB",
+                "latitude": 43.416,
+                "longitude": 5.2145
+            },
+            {
+                "agent_name": "HAMMID",
+                "latitude": 43.5359142,
+                "longitude": 5.4088791
+            },
+            {
+                "agent_name": "HAMMOUN",
+                "latitude": 43.2773135,
+                "longitude": 5.4199851
+            },
+            {
+                "agent_name": "HEMAL",
+                "latitude": 43.5283,
+                "longitude": 5.4497
+            },
+            {
+                "agent_name": "HOGGAS",
+                "latitude": 43.4115275,
+                "longitude": 5.0182878
+            },
+            {
+                "agent_name": "KADRI",
+                "latitude": 43.4238131,
+                "longitude": 5.2757832
+            },
+            {
+                "agent_name": "KHELAIFIA",
+                "latitude": 43.4074,
+                "longitude": 5.0553
+            },
+            {
+                "agent_name": "LARABI",
+                "latitude": 43.4066,
+                "longitude": 4.9809
+            },
+            {
+                "agent_name": "LESPERANT",
+                "latitude": 43.3025363,
+                "longitude": 5.4538221
+            },
+            {
+                "agent_name": "LETESSIER",
+                "latitude": 43.492787,
+                "longitude": 4.9892519
+            },
+            {
+                "agent_name": "MORTELECQ",
+                "latitude": 43.4057279,
+                "longitude": 5.0548176
+            },
+            {
+                "agent_name": "PENA",
+                "latitude": 43.3952212,
+                "longitude": 5.1233658
+            },
+            {
+                "agent_name": "PETEZ",
+                "latitude": 43.416,
+                "longitude": 5.2145
+            },
+            {
+                "agent_name": "POINT",
+                "latitude": 43.3833,
+                "longitude": 5.1667
+            },
+            {
+                "agent_name": "SANTIAGO",
+                "latitude": 43.4143066,
+                "longitude": 5.0475031
+            },
+            {
+                "agent_name": "SOLTANI",
+                "latitude": 43.3104418,
+                "longitude": 5.4044691
+            },
+            {
+                "agent_name": "TOUMI",
+                "latitude": 43.4377,
+                "longitude": 4.9446
+            },
+            {
+                "agent_name": "VIERU",
+                "latitude": 43.4330368,
+                "longitude": 5.4650116
+            },
+            {
+                "agent_name": "YAHIAOUI",
+                "latitude": 43.2334629,
+                "longitude": 5.4054074
+            }
+        ]
+    },
+    {
+        "site_id": "001814C",
+        "site_name": "FEDEX_-_NICE_VALLAURIS",
+        "latitude": 43.59420463247095,
+        "longitude": 7.058125150297479,
+        "agents": [
+            {
+                "agent_name": "BELLAHCENE",
+                "latitude": 43.3307561,
+                "longitude": 5.3888697
+            },
+            {
+                "agent_name": "GAMBINO",
+                "latitude": 43.3190819,
+                "longitude": 5.3864807
+            },
+            {
+                "agent_name": "HAMMI",
+                "latitude": 43.5379981,
+                "longitude": 5.4344744
+            },
+            {
+                "agent_name": "OHANESSIAN",
+                "latitude": 43.2907,
+                "longitude": 5.4384
+            },
+            {
+                "agent_name": "TOURE",
+                "latitude": 43.3315351,
+                "longitude": 5.4573483
+            }
+        ]
+    },
+    {
+        "site_id": "000925C",
+        "site_name": "ARKEMA_COATEX",
+        "latitude": 45.89065044856784,
+        "longitude": 4.823433122409237,
+        "agents": [
+            {
+                "agent_name": "BELLET",
+                "latitude": 45.7564504,
+                "longitude": 4.7893115
+            },
+            {
+                "agent_name": "BENDJAMA",
+                "latitude": 45.7684369,
+                "longitude": 4.8750064
+            },
+            {
+                "agent_name": "BERRA",
+                "latitude": 46.06499,
+                "longitude": 5.07327
+            },
+            {
+                "agent_name": "THIMONIER",
+                "latitude": 45.833676,
+                "longitude": 4.6172893
+            }
+        ]
+    },
+    {
+        "site_id": "000924C",
+        "site_name": "ARKEMA_PIERRE_BENTIE_CETIA",
+        "latitude": 45.70404941785928,
+        "longitude": 4.833660188852408,
+        "agents": [
+            {
+                "agent_name": "BENMAKRANE",
+                "latitude": 45.6958591,
+                "longitude": 4.8256053
+            },
+            {
+                "agent_name": "BOUMEDIENE",
+                "latitude": 45.7235973,
+                "longitude": 4.8856477
+            },
+            {
+                "agent_name": "KHERRAZ",
+                "latitude": 45.6997862,
+                "longitude": 4.8798342
+            },
+            {
+                "agent_name": "MAHGOUN",
+                "latitude": 45.9172379,
+                "longitude": 5.2181249
+            }
+        ]
+    },
+    {
+        "site_id": "000895C",
+        "site_name": "MERSEN",
+        "latitude": 45.700473291638055,
+        "longitude": 5.017826684620926,
+        "agents": [
+            {
+                "agent_name": "BENMEKIDECHE",
+                "latitude": 45.7513437,
+                "longitude": 5.1724566
+            },
+            {
+                "agent_name": "LEPINE",
+                "latitude": 45.6345667,
+                "longitude": 5.4998698
+            }
+        ]
+    },
+    {
+        "site_id": "000978C",
+        "site_name": "MUSEE_DES_CONFLUENCES",
+        "latitude": 45.732782953633134,
+        "longitude": 4.81821530607788,
+        "agents": [
+            {
+                "agent_name": "BENMEKIDECHE",
+                "latitude": 45.741068,
+                "longitude": 5.162385
+            },
+            {
+                "agent_name": "BENZINA",
+                "latitude": 45.7677241,
+                "longitude": 4.7975436
+            },
+            {
+                "agent_name": "BOUFEDJ",
+                "latitude": 45.7671929,
+                "longitude": 4.8872283
+            },
+            {
+                "agent_name": "GHERBI",
+                "latitude": 45.7019047,
+                "longitude": 4.869446
+            },
+            {
+                "agent_name": "GHERBI",
+                "latitude": 45.37302,
+                "longitude": 4.80725
+            },
+            {
+                "agent_name": "HADIETOU",
+                "latitude": 45.7718041,
+                "longitude": 4.8969574
+            },
+            {
+                "agent_name": "HOUMADI",
+                "latitude": 45.7926233,
+                "longitude": 4.8518806
+            },
+            {
+                "agent_name": "MANDER",
+                "latitude": 45.7667,
+                "longitude": 4.8833
+            },
+            {
+                "agent_name": "RENIF",
+                "latitude": 45.7656446,
+                "longitude": 5.1982705
+            }
+        ]
+    },
+    {
+        "site_id": "000966C",
+        "site_name": "UGC_CONFLUENCE",
+        "latitude": 45.74082584078411,
+        "longitude": 4.818324508658057,
+        "agents": [
+            {
+                "agent_name": "BENMEKLIA",
+                "latitude": 45.7336996,
+                "longitude": 4.8251306
+            }
+        ]
+    },
+    {
+        "site_id": "001338S",
+        "site_name": "GL_EVENTS_EUREXPO_-_PS",
+        "latitude": 45.7311717918308,
+        "longitude": 4.95147115309663,
+        "agents": [
+            {
+                "agent_name": "BENZAHI",
+                "latitude": 45.7780214,
+                "longitude": 4.9210967
+            },
+            {
+                "agent_name": "CHAOUBI",
+                "latitude": 45.7757774,
+                "longitude": 4.8802346
+            },
+            {
+                "agent_name": "DELAY",
+                "latitude": 45.467818,
+                "longitude": 4.942813
+            },
+            {
+                "agent_name": "KOROLOFF",
+                "latitude": 45.5954656,
+                "longitude": 4.763999
+            },
+            {
+                "agent_name": "MAALEM",
+                "latitude": 45.7712186,
+                "longitude": 4.9989288
+            },
+            {
+                "agent_name": "MERSEL",
+                "latitude": 45.7602761,
+                "longitude": 4.8803309
+            },
+            {
+                "agent_name": "RAHMANI",
+                "latitude": 45.7628326,
+                "longitude": 4.8741095
+            }
+        ]
+    },
+    {
+        "site_id": "001933C",
+        "site_name": "FRAMATOME_-_ROMANS",
+        "latitude": 45.05338857120988,
+        "longitude": 5.097201416750241,
+        "agents": [
+            {
+                "agent_name": "BERCHE",
+                "latitude": 45.0518942,
+                "longitude": 5.0600864
+            },
+            {
+                "agent_name": "BRICHET",
+                "latitude": 45.1153671,
+                "longitude": 4.9147826
+            },
+            {
+                "agent_name": "BRIER",
+                "latitude": 45.1745781,
+                "longitude": 4.8156873
+            },
+            {
+                "agent_name": "CONTASSOT VIVIER",
+                "latitude": 44.5692671,
+                "longitude": 4.7494465
+            },
+            {
+                "agent_name": "CORSINI",
+                "latitude": 44.805038,
+                "longitude": 4.7819729
+            },
+            {
+                "agent_name": "DEMON",
+                "latitude": 44.8692869,
+                "longitude": 4.8387864
+            },
+            {
+                "agent_name": "DUPONT",
+                "latitude": 45.1519812,
+                "longitude": 5.3185724
+            },
+            {
+                "agent_name": "FALLAY",
+                "latitude": 45.1240508,
+                "longitude": 4.9805567
+            },
+            {
+                "agent_name": "FAURE",
+                "latitude": 45.0145131,
+                "longitude": 5.2839983
+            },
+            {
+                "agent_name": "GARNIER",
+                "latitude": 45.131427,
+                "longitude": 4.8146789
+            },
+            {
+                "agent_name": "GUILLOUIN PONTAL",
+                "latitude": 45.0085532,
+                "longitude": 5.0877061
+            },
+            {
+                "agent_name": "MADANGA OUANOPEE",
+                "latitude": 44.9461538,
+                "longitude": 4.8439718
+            },
+            {
+                "agent_name": "MALATRE",
+                "latitude": 44.7656672,
+                "longitude": 4.92214
+            },
+            {
+                "agent_name": "MARTY",
+                "latitude": 45.0671034,
+                "longitude": 4.8573418
+            },
+            {
+                "agent_name": "MASSELOT",
+                "latitude": 45.0630864,
+                "longitude": 5.1373601
+            },
+            {
+                "agent_name": "MONTEL",
+                "latitude": 45.1256287,
+                "longitude": 4.9855061
+            },
+            {
+                "agent_name": "NOGBOUN",
+                "latitude": 44.9209575,
+                "longitude": 4.8945881
+            },
+            {
+                "agent_name": "PAQUIEN",
+                "latitude": 45.0418304,
+                "longitude": 5.0750209
+            },
+            {
+                "agent_name": "PLUTON",
+                "latitude": 45.1610059,
+                "longitude": 4.8319845
+            },
+            {
+                "agent_name": "SAVIN",
+                "latitude": 45.0732522,
+                "longitude": 4.8323232
+            },
+            {
+                "agent_name": "SEUSSE",
+                "latitude": 44.7998753,
+                "longitude": 4.7783392
+            },
+            {
+                "agent_name": "SZENK",
+                "latitude": 44.9755835,
+                "longitude": 5.0272644
+            },
+            {
+                "agent_name": "VASCHALDE",
+                "latitude": 45.1301639,
+                "longitude": 4.814469
+            }
+        ]
+    },
+    {
+        "site_id": "000892C",
+        "site_name": "CCCL_SECURITE_-GL_EVENTS",
+        "latitude": 45.78547757703771,
+        "longitude": 4.854607977210288,
+        "agents": [
+            {
+                "agent_name": "BESSAHRAOUI",
+                "latitude": 45.6985978,
+                "longitude": 4.8628258
+            },
+            {
+                "agent_name": "DALIBEY",
+                "latitude": 45.7673941,
+                "longitude": 4.8737241
+            },
+            {
+                "agent_name": "MERABET",
+                "latitude": 45.6871035,
+                "longitude": 4.8130974
+            },
+            {
+                "agent_name": "MESSAI",
+                "latitude": 45.7552916,
+                "longitude": 4.8835956
+            },
+            {
+                "agent_name": "PELLET",
+                "latitude": 45.6158865,
+                "longitude": 4.6737802
+            },
+            {
+                "agent_name": "SABRY",
+                "latitude": 45.7726,
+                "longitude": 4.8033
+            },
+            {
+                "agent_name": "SERSOUB",
+                "latitude": 45.8109799,
+                "longitude": 4.8977526
+            },
+            {
+                "agent_name": "SOUMARE",
+                "latitude": 45.7808024,
+                "longitude": 4.9116423
+            }
+        ]
+    },
+    {
+        "site_id": "000978S",
+        "site_name": "MUSEE_DES_CONFLUENCES_-_PS",
+        "latitude": 45.732782953633134,
+        "longitude": 4.81821530607788,
+        "agents": [
+            {
+                "agent_name": "BETTAHAR",
+                "latitude": 45.7556798,
+                "longitude": 4.8781585
+            },
+            {
+                "agent_name": "ELGUERRAOUI",
+                "latitude": 45.7317657,
+                "longitude": 4.8297511
+            }
+        ]
+    },
+    {
+        "site_id": "001855S",
+        "site_name": "TOUR_TO_LYON_-_PS",
+        "latitude": 45.75927506675402,
+        "longitude": 4.858696777409631,
+        "agents": [
+            {
+                "agent_name": "BONILLA DIPRE",
+                "latitude": 45.7783796,
+                "longitude": 4.8841581
+            }
+        ]
+    },
+    {
+        "site_id": "001963C",
+        "site_name": "IMERYS_-_FOS_SUR_MER",
+        "latitude": 43.42773275276952,
+        "longitude": 4.970518993632601,
+        "agents": [
+            {
+                "agent_name": "BOTTON",
+                "latitude": 43.4750788,
+                "longitude": 4.9469707
+            },
+            {
+                "agent_name": "VINCENTELLI MALYSZKO",
+                "latitude": 43.4020006,
+                "longitude": 5.2213346
+            }
+        ]
+    },
+    {
+        "site_id": "001334C",
+        "site_name": "TOTAL_-_CRES",
+        "latitude": 45.651181858638274,
+        "longitude": 4.832121869727959,
+        "agents": [
+            {
+                "agent_name": "BOUCHERIH",
+                "latitude": 45.7378583,
+                "longitude": 4.8504948
+            },
+            {
+                "agent_name": "HADDAD",
+                "latitude": 45.7569906,
+                "longitude": 4.8160666
+            },
+            {
+                "agent_name": "NEKA",
+                "latitude": 45.7399059,
+                "longitude": 4.8201167
+            },
+            {
+                "agent_name": "PERRONCEL",
+                "latitude": 45.5694737,
+                "longitude": 4.6799035
+            },
+            {
+                "agent_name": "ZITOUNI",
+                "latitude": 45.5910654,
+                "longitude": 4.7704574
+            }
+        ]
+    },
+    {
+        "site_id": "001660S",
+        "site_name": "DPF_-_PS",
+        "latitude": 43.435771587492034,
+        "longitude": 4.916022932899836,
+        "agents": [
+            {
+                "agent_name": "BOUFROUKH",
+                "latitude": 43.3472349,
+                "longitude": 5.3692796
+            }
+        ]
+    },
+    {
+        "site_id": "001399C",
+        "site_name": "TOTAL_-_PUGET_ARGENS",
+        "latitude": 43.44991289354867,
+        "longitude": 6.689507145421315,
+        "agents": [
+            {
+                "agent_name": "BOUNGAB",
+                "latitude": 43.4287912,
+                "longitude": 6.8096055
+            },
+            {
+                "agent_name": "LE DERFF",
+                "latitude": 43.4267829,
+                "longitude": 6.7318185
+            },
+            {
+                "agent_name": "NORMAND",
+                "latitude": 43.437133,
+                "longitude": 6.76939
+            }
+        ]
+    },
+    {
+        "site_id": "001727C",
+        "site_name": "ORANGE_ISLE_D_ABEAU",
+        "latitude": 45.612795142368384,
+        "longitude": 5.2246951801824,
+        "agents": [
+            {
+                "agent_name": "BOURAHLA",
+                "latitude": 45.6146733,
+                "longitude": 5.2146083
+            }
+        ]
+    },
+    {
+        "site_id": "000787C",
+        "site_name": "INDUSTEEL",
+        "latitude": 45.533120817999205,
+        "longitude": 4.633282942982262,
+        "agents": [
+            {
+                "agent_name": "BOURRAT",
+                "latitude": 45.4468464,
+                "longitude": 4.3970426
+            },
+            {
+                "agent_name": "EL MOUDEN",
+                "latitude": 45.5197054,
+                "longitude": 4.599157
+            },
+            {
+                "agent_name": "JOUSSERAND",
+                "latitude": 45.455599,
+                "longitude": 4.3820242
+            }
+        ]
+    },
+    {
+        "site_id": "001198C",
+        "site_name": "SKY_56_-_LYON_-_FM",
+        "latitude": 45.75355893249617,
+        "longitude": 4.861312491048599,
+        "agents": [
+            {
+                "agent_name": "BOUSSAIDI",
+                "latitude": 45.4736,
+                "longitude": 4.5254
+            },
+            {
+                "agent_name": "CALVO GOMES",
+                "latitude": 45.7810128,
+                "longitude": 4.8291208
+            },
+            {
+                "agent_name": "EL IDRISSI",
+                "latitude": 45.758549,
+                "longitude": 4.8716478
+            },
+            {
+                "agent_name": "HERIF",
+                "latitude": 45.7830648,
+                "longitude": 4.8678405
+            },
+            {
+                "agent_name": "IGHIL AMEUR",
+                "latitude": 45.7757106,
+                "longitude": 4.8731679
+            },
+            {
+                "agent_name": "LAMANDA",
+                "latitude": 45.848963,
+                "longitude": 5.05011
+            },
+            {
+                "agent_name": "NGANDO NGANDO",
+                "latitude": 45.87005,
+                "longitude": 4.91346
+            },
+            {
+                "agent_name": "PAGLIA PONSONNET",
+                "latitude": 45.7490762,
+                "longitude": 4.8721527
+            },
+            {
+                "agent_name": "REKKAD",
+                "latitude": 45.6026521,
+                "longitude": 4.7643787
+            },
+            {
+                "agent_name": "SANDA",
+                "latitude": 45.8114898,
+                "longitude": 4.888638
+            },
+            {
+                "agent_name": "TREILLE",
+                "latitude": 45.8495261,
+                "longitude": 4.36349
+            },
+            {
+                "agent_name": "VIGNON",
+                "latitude": 45.8956511,
+                "longitude": 4.4375101
+            }
+        ]
+    },
+    {
+        "site_id": "001066C",
+        "site_name": "CPAM_-_MEYZIEU",
+        "latitude": 45.76563860949149,
+        "longitude": 4.998408349878293,
+        "agents": [
+            {
+                "agent_name": "BOUSSERGHINE",
+                "latitude": 45.8147589,
+                "longitude": 4.9065463
+            }
+        ]
+    },
+    {
+        "site_id": "001067C",
+        "site_name": "CPAM_-_OULLINS",
+        "latitude": 45.71829765289756,
+        "longitude": 4.812362395283273,
+        "agents": [
+            {
+                "agent_name": "BOUTAANI",
+                "latitude": 45.5926794,
+                "longitude": 4.7660624
+            }
+        ]
+    },
+    {
+        "site_id": "001400C",
+        "site_name": "BNP_PARIBAS_-_NEW_DEAL",
+        "latitude": 45.75250979298977,
+        "longitude": 4.84068808198311,
+        "agents": [
+            {
+                "agent_name": "BRAU",
+                "latitude": 45.808929,
+                "longitude": 5.1791606
+            },
+            {
+                "agent_name": "CHACHOUR",
+                "latitude": 45.7378499,
+                "longitude": 4.8625265
+            },
+            {
+                "agent_name": "HASNAOUI",
+                "latitude": 45.7731566,
+                "longitude": 4.8731851
+            },
+            {
+                "agent_name": "NAFTI",
+                "latitude": 45.86822,
+                "longitude": 5.12683
+            },
+            {
+                "agent_name": "ZOGHLAMI",
+                "latitude": 45.7292496,
+                "longitude": 4.8470898
+            }
+        ]
+    },
+    {
+        "site_id": "000206C",
+        "site_name": "CAGI_&_INTER_CLERMONT_FER",
+        "latitude": 45.7797580517562,
+        "longitude": 3.071219006726766,
+        "agents": [
+            {
+                "agent_name": "BROMONT",
+                "latitude": 46.0373407,
+                "longitude": 2.9564081
+            },
+            {
+                "agent_name": "CHAGNIAUD",
+                "latitude": 45.8818338,
+                "longitude": 3.1061464
+            },
+            {
+                "agent_name": "DEVEDEUX",
+                "latitude": 45.8921283,
+                "longitude": 3.0874528
+            },
+            {
+                "agent_name": "SOUISSI",
+                "latitude": 45.7797,
+                "longitude": 3.0863
+            }
+        ]
+    },
+    {
+        "site_id": "000929C",
+        "site_name": "E2V_GRENOBLE",
+        "latitude": 45.24292531323743,
+        "longitude": 5.6805596276294645,
+        "agents": [
+            {
+                "agent_name": "BUISSON",
+                "latitude": 45.2333,
+                "longitude": 5.4
+            },
+            {
+                "agent_name": "CARTIER",
+                "latitude": 45.2406878,
+                "longitude": 5.6882886
+            },
+            {
+                "agent_name": "CHETIH",
+                "latitude": 45.2435979,
+                "longitude": 5.6752682
+            },
+            {
+                "agent_name": "MAHDJOUB",
+                "latitude": 45.2016608,
+                "longitude": 5.7060492
+            },
+            {
+                "agent_name": "TEBBAKH",
+                "latitude": 45.1536137,
+                "longitude": 5.7134319
+            },
+            {
+                "agent_name": "ZOUAGUI",
+                "latitude": 45.5428191,
+                "longitude": 5.5774171
+            }
+        ]
+    },
+    {
+        "site_id": "000508C",
+        "site_name": "SNCF_GARES_NICE",
+        "latitude": 43.704735211616295,
+        "longitude": 7.261253959900605,
+        "agents": [
+            {
+                "agent_name": "CARNEVALE",
+                "latitude": 43.7842726,
+                "longitude": 7.4842704
+            }
+        ]
+    },
+    {
+        "site_id": "001916C",
+        "site_name": "NEXANS_-_BOURG_EN_BRESSE",
+        "latitude": 46.207369634479015,
+        "longitude": 5.209487811572112,
+        "agents": [
+            {
+                "agent_name": "CHAVEINTE",
+                "latitude": 46.2293587,
+                "longitude": 5.2289378
+            }
+        ]
+    },
+    {
+        "site_id": "001511C",
+        "site_name": "TOTAL_-_COURNON",
+        "latitude": 45.73565893734492,
+        "longitude": 3.173744541142985,
+        "agents": [
+            {
+                "agent_name": "CHICARD",
+                "latitude": 45.7693648,
+                "longitude": 3.2818103
+            },
+            {
+                "agent_name": "DEVOS",
+                "latitude": 45.7814371,
+                "longitude": 3.0939064
+            },
+            {
+                "agent_name": "PELLE",
+                "latitude": 45.918368,
+                "longitude": 3.3330592
+            }
+        ]
+    },
+    {
+        "site_id": "001420C",
+        "site_name": "BASE_125_ISTRES",
+        "latitude": 43.5180898914706,
+        "longitude": 4.95503284886095,
+        "agents": [
+            {
+                "agent_name": "COLL",
+                "latitude": 43.4621145,
+                "longitude": 4.9467365
+            }
+        ]
+    },
+    {
+        "site_id": "001594S",
+        "site_name": "LYONDELLBASELL_-_PS",
+        "latitude": 43.49625535509231,
+        "longitude": 5.174539557405414,
+        "agents": [
+            {
+                "agent_name": "CORTES",
+                "latitude": 43.46,
+                "longitude": 5.2486
+            }
+        ]
+    },
+    {
+        "site_id": "001664C",
+        "site_name": "BNP_LOGICAL_ARROW",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "CROCHON",
+                "latitude": 45.5165721,
+                "longitude": 5.4001537
+            },
+            {
+                "agent_name": "MEROUANE",
+                "latitude": 45.6983786,
+                "longitude": 4.8742226
+            },
+            {
+                "agent_name": "PRISO",
+                "latitude": 45.7599067,
+                "longitude": 4.9240153
+            },
+            {
+                "agent_name": "RESSE",
+                "latitude": 45.622736,
+                "longitude": 5.2293447
+            },
+            {
+                "agent_name": "SAM",
+                "latitude": 45.6125196,
+                "longitude": 5.156984
+            }
+        ]
+    },
+    {
+        "site_id": "000912C",
+        "site_name": "CCCL_SURETE_-_GL_EVENTS",
+        "latitude": 45.78547757703771,
+        "longitude": 4.854607977210288,
+        "agents": [
+            {
+                "agent_name": "CUMINAL",
+                "latitude": 45.6959995,
+                "longitude": 4.8691171
+            }
+        ]
+    },
+    {
+        "site_id": "000620C",
+        "site_name": "VALEO_ST_QUENTIN",
+        "latitude": 45.848401935096064,
+        "longitude": 5.11353685071984,
+        "agents": [
+            {
+                "agent_name": "CUMINAL",
+                "latitude": 45.6959995,
+                "longitude": 4.8691171
+            },
+            {
+                "agent_name": "MUSIRIKARI",
+                "latitude": 45.6216658,
+                "longitude": 5.23385
+            }
+        ]
+    },
+    {
+        "site_id": "001506C",
+        "site_name": "AOSTE_-_MACLAS",
+        "latitude": 45.35582921583042,
+        "longitude": 4.671175723998164,
+        "agents": [
+            {
+                "agent_name": "DELEPINE",
+                "latitude": 45.31664721089097,
+                "longitude": 4.767107086035359
+            }
+        ]
+    },
+    {
+        "site_id": "001783C",
+        "site_name": "13E_BSMAT",
+        "latitude": 46.573022372943264,
+        "longitude": 3.34172517682886,
+        "agents": [
+            {
+                "agent_name": "DELMAS",
+                "latitude": 46.2455056,
+                "longitude": 3.2677723
+            },
+            {
+                "agent_name": "MAILLOT",
+                "latitude": 46.46466,
+                "longitude": 3.43161
+            }
+        ]
+    },
+    {
+        "site_id": "001809C",
+        "site_name": "GL_EVENTS_BRIGNAIS",
+        "latitude": 45.67338787277407,
+        "longitude": 4.769196128191092,
+        "agents": [
+            {
+                "agent_name": "DIARRA",
+                "latitude": 45.7343141,
+                "longitude": 4.8581834
+            },
+            {
+                "agent_name": "STERLIN",
+                "latitude": 45.5896089,
+                "longitude": 4.7636957
+            }
+        ]
+    },
+    {
+        "site_id": "001645C",
+        "site_name": "PF_-_GENEVE_ST_JULIEN",
+        "latitude": 46.15053272194061,
+        "longitude": 6.092497111866561,
+        "agents": [
+            {
+                "agent_name": "DURET",
+                "latitude": 46.0253095,
+                "longitude": 5.9817632
+            },
+            {
+                "agent_name": "LAIB",
+                "latitude": 46.1837808,
+                "longitude": 6.2000519
+            },
+            {
+                "agent_name": "ZOUHAIR BOUGTAIB",
+                "latitude": 46.1174922,
+                "longitude": 6.0382115
+            }
+        ]
+    },
+    {
+        "site_id": "001660C",
+        "site_name": "DPF",
+        "latitude": 43.435771587492034,
+        "longitude": 4.916022932899836,
+        "agents": [
+            {
+                "agent_name": "DURIF",
+                "latitude": 43.3980976,
+                "longitude": 4.9813143
+            },
+            {
+                "agent_name": "ETIENNE",
+                "latitude": 43.3873,
+                "longitude": 4.8261
+            },
+            {
+                "agent_name": "FLENET",
+                "latitude": 43.4537474,
+                "longitude": 5.0134633
+            },
+            {
+                "agent_name": "GARCIA",
+                "latitude": 43.7306109,
+                "longitude": 4.7097581
+            },
+            {
+                "agent_name": "GARCIA",
+                "latitude": 43.6945692,
+                "longitude": 4.6324504
+            },
+            {
+                "agent_name": "LARUE",
+                "latitude": 43.5301003,
+                "longitude": 5.2545295
+            },
+            {
+                "agent_name": "LAUZERAL",
+                "latitude": 43.5158995,
+                "longitude": 4.9756161
+            },
+            {
+                "agent_name": "MATRONE",
+                "latitude": 43.4051872,
+                "longitude": 5.056125
+            },
+            {
+                "agent_name": "PARISOT",
+                "latitude": 43.5627383,
+                "longitude": 5.024128
+            },
+            {
+                "agent_name": "PORCHET",
+                "latitude": 43.5033256,
+                "longitude": 4.9842994
+            },
+            {
+                "agent_name": "RODRIGUEZ",
+                "latitude": 43.4578407,
+                "longitude": 4.9466451
+            },
+            {
+                "agent_name": "SIGONNEY",
+                "latitude": 43.5401927,
+                "longitude": 5.4146049
+            },
+            {
+                "agent_name": "VINCHES",
+                "latitude": 43.4483303,
+                "longitude": 4.9408021
+            }
+        ]
+    },
+    {
+        "site_id": "001883C",
+        "site_name": "SOGELYM_-_PONT_D_AIN",
+        "latitude": 46.03622810248409,
+        "longitude": 5.350924007343255,
+        "agents": [
+            {
+                "agent_name": "EL BOUKHRISSI",
+                "latitude": 46.180775,
+                "longitude": 5.3166622
+            }
+        ]
+    },
+    {
+        "site_id": "001303C",
+        "site_name": "SFR_-_ST_PRIEST",
+        "latitude": 45.72228508100886,
+        "longitude": 4.926543474067083,
+        "agents": [
+            {
+                "agent_name": "EL MOUEDDEN",
+                "latitude": 45.6607782,
+                "longitude": 5.3238625
+            }
+        ]
+    },
+    {
+        "site_id": "900007S",
+        "site_name": "PS_CLIENTS_DIVERS",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "FABRE",
+                "latitude": 45.7142236,
+                "longitude": 4.7693539
+            }
+        ]
+    },
+    {
+        "site_id": "000069C",
+        "site_name": "CIEL",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "GASSIER",
+                "latitude": 43.2802075,
+                "longitude": 5.4363541
+            }
+        ]
+    },
+    {
+        "site_id": "001336C",
+        "site_name": "TOTAL_-_ST_MARTIN_HERES",
+        "latitude": 45.18915485484794,
+        "longitude": 5.754591787709392,
+        "agents": [
+            {
+                "agent_name": "GHARBI",
+                "latitude": 45.1781095,
+                "longitude": 5.7221394
+            },
+            {
+                "agent_name": "KARAMOSLY",
+                "latitude": 45.1797599,
+                "longitude": 5.7083531
+            },
+            {
+                "agent_name": "MOKHTARI",
+                "latitude": 45.176894,
+                "longitude": 5.7661215
+            },
+            {
+                "agent_name": "VIALLET",
+                "latitude": 45.1129,
+                "longitude": 5.7265
+            }
+        ]
+    },
+    {
+        "site_id": "001072C",
+        "site_name": "CPAM_-_SAINT_PRIEST",
+        "latitude": 45.689759333702014,
+        "longitude": 4.938158536159351,
+        "agents": [
+            {
+                "agent_name": "GOLOUBTCHENKO",
+                "latitude": 45.7618917,
+                "longitude": 4.7997
+            }
+        ]
+    },
+    {
+        "site_id": "000713C",
+        "site_name": "TOUR_SWISSLIFE",
+        "latitude": 45.76311168054964,
+        "longitude": 4.8584480735894005,
+        "agents": [
+            {
+                "agent_name": "GOMBAULD",
+                "latitude": 45.5697995,
+                "longitude": 5.2960291
+            }
+        ]
+    },
+    {
+        "site_id": "000752C",
+        "site_name": "AXIMA_SEITHA",
+        "latitude": 45.79822616906071,
+        "longitude": 3.139847710729135,
+        "agents": [
+            {
+                "agent_name": "GUEMER",
+                "latitude": 45.7597876,
+                "longitude": 4.8953754
+            },
+            {
+                "agent_name": "RIAH",
+                "latitude": 45.4736,
+                "longitude": 4.5254
+            }
+        ]
+    },
+    {
+        "site_id": "001168C",
+        "site_name": "VILLA_RTE",
+        "latitude": 45.74047193414002,
+        "longitude": 4.832660996853153,
+        "agents": [
+            {
+                "agent_name": "GUESMIA",
+                "latitude": 45.7363,
+                "longitude": 4.8687
+            }
+        ]
+    },
+    {
+        "site_id": "001611C",
+        "site_name": "BUT_CABRIES",
+        "latitude": 43.41690713345943,
+        "longitude": 5.3609051925901525,
+        "agents": [
+            {
+                "agent_name": "HACHEMANE",
+                "latitude": 43.2961904,
+                "longitude": 5.3791605
+            }
+        ]
+    },
+    {
+        "site_id": "001882C",
+        "site_name": "RONDES_GRENOBLE",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "HADJ AHMED HAMED",
+                "latitude": 45.1815912,
+                "longitude": 5.7274774
+            }
+        ]
+    },
+    {
+        "site_id": "001730C",
+        "site_name": "ORANGE_LYON_3E_ARR",
+        "latitude": 45.762186881304814,
+        "longitude": 4.8554629837523455,
+        "agents": [
+            {
+                "agent_name": "KABA",
+                "latitude": 45.7467686,
+                "longitude": 4.8567217
+            }
+        ]
+    },
+    {
+        "site_id": "001326S",
+        "site_name": "TOTAL_-_FEYZIN_-_PS",
+        "latitude": 45.675254863640376,
+        "longitude": 4.846796852204186,
+        "agents": [
+            {
+                "agent_name": "KADEM",
+                "latitude": 45.7565948,
+                "longitude": 4.863293
+            }
+        ]
+    },
+    {
+        "site_id": "000235C",
+        "site_name": "LEROY_SOMER",
+        "latitude": 45.6369935680087,
+        "longitude": 4.875942502323299,
+        "agents": [
+            {
+                "agent_name": "KADRI",
+                "latitude": 45.7831572,
+                "longitude": 4.9251468
+            }
+        ]
+    },
+    {
+        "site_id": "001855F",
+        "site_name": "TOUR_TO_LYON_-_FO",
+        "latitude": 45.75927506675402,
+        "longitude": 4.858696777409631,
+        "agents": [
+            {
+                "agent_name": "KEZAI",
+                "latitude": 45.7621436,
+                "longitude": 4.7904612
+            }
+        ]
+    },
+    {
+        "site_id": "001062C",
+        "site_name": "CPAM_-_LYON_AUBIGNY",
+        "latitude": 45.76132448155068,
+        "longitude": 4.863276286101986,
+        "agents": [
+            {
+                "agent_name": "LAGHA",
+                "latitude": 45.7667,
+                "longitude": 4.8833
+            }
+        ]
+    },
+    {
+        "site_id": "000228C",
+        "site_name": "LABO_SERVICE_SCORY",
+        "latitude": 45.57115042737888,
+        "longitude": 4.797483588332166,
+        "agents": [
+            {
+                "agent_name": "LAKHAL",
+                "latitude": 45.7530048,
+                "longitude": 5.1711513
+            }
+        ]
+    },
+    {
+        "site_id": "000854C",
+        "site_name": "ORANGE_PART_DIEU_-_ADVENIS",
+        "latitude": 45.76203947507448,
+        "longitude": 4.855299826159077,
+        "agents": [
+            {
+                "agent_name": "LEKHAL",
+                "latitude": 45.7623552,
+                "longitude": 4.9104303
+            }
+        ]
+    },
+    {
+        "site_id": "000924S",
+        "site_name": "ARKEMA_PIERRE_BENTIE_CETIA_-_PS",
+        "latitude": 45.70404941785928,
+        "longitude": 4.833660188852408,
+        "agents": [
+            {
+                "agent_name": "LEROY",
+                "latitude": 45.6842916,
+                "longitude": 4.9316332
+            }
+        ]
+    },
+    {
+        "site_id": "000517C",
+        "site_name": "INPI",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "MAHE",
+                "latitude": 43.4233,
+                "longitude": 6.7735
+            }
+        ]
+    },
+    {
+        "site_id": "001337C",
+        "site_name": "INTERRA_LOG",
+        "latitude": 45.65548295977064,
+        "longitude": 4.92336188897288,
+        "agents": [
+            {
+                "agent_name": "MEKKAKIA MAAZA",
+                "latitude": 45.7333,
+                "longitude": 4.9167
+            }
+        ]
+    },
+    {
+        "site_id": "000194C",
+        "site_name": "INSTITUT_PASTEUR",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "MEZAAD",
+                "latitude": 43.4866688,
+                "longitude": 5.1700052
+            }
+        ]
+    },
+    {
+        "site_id": "001778C",
+        "site_name": "LOU_BRASSERIE",
+        "latitude": 45.723793231468,
+        "longitude": 4.831344400208029,
+        "agents": [
+            {
+                "agent_name": "MOUFAKKIR",
+                "latitude": 45.7303967,
+                "longitude": 4.9170203
+            }
+        ]
+    },
+    {
+        "site_id": "001729C",
+        "site_name": "ORANGE_LYON_2E_ARR",
+        "latitude": 45.75980656971384,
+        "longitude": 4.835127421474437,
+        "agents": [
+            {
+                "agent_name": "MURIAT",
+                "latitude": 45.736045,
+                "longitude": 4.6580639
+            }
+        ]
+    },
+    {
+        "site_id": "001070C",
+        "site_name": "CPAM_-_VILLEFRANCHE_S/_SAONE",
+        "latitude": 45.99121213975381,
+        "longitude": 4.714910339780347,
+        "agents": [
+            {
+                "agent_name": "NDIAYE",
+                "latitude": 45.94111,
+                "longitude": 4.76727
+            }
+        ]
+    },
+    {
+        "site_id": "000823C",
+        "site_name": "ALLIANZ_LYON_-_SAMSIC_FM",
+        "latitude": 45.75422396385868,
+        "longitude": 4.859677654885905,
+        "agents": [
+            {
+                "agent_name": "NTEP CARITTE",
+                "latitude": 45.7818,
+                "longitude": 4.9209
+            },
+            {
+                "agent_name": "SAIDI",
+                "latitude": 45.4462062,
+                "longitude": 4.392341
+            },
+            {
+                "agent_name": "THIBON",
+                "latitude": 45.7587868,
+                "longitude": 4.8868478
+            }
+        ]
+    },
+    {
+        "site_id": "001039C",
+        "site_name": "EFS_SECLIN",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "REANT",
+                "latitude": 45.7651461,
+                "longitude": 4.6587998
+            }
+        ]
+    },
+    {
+        "site_id": "001053C",
+        "site_name": "AQUARIUM_DE_LYON",
+        "latitude": 45.728218265043445,
+        "longitude": 4.815527618660092,
+        "agents": [
+            {
+                "agent_name": "RUEL",
+                "latitude": 45.7699437,
+                "longitude": 4.8642114
+            }
+        ]
+    },
+    {
+        "site_id": "000782C",
+        "site_name": "BENOIT",
+        "latitude": 0.0,
+        "longitude": 0.0,
+        "agents": [
+            {
+                "agent_name": "SLIM",
+                "latitude": 45.7508312,
+                "longitude": 4.9186749
+            }
+        ]
+    },
+    {
+        "site_id": "001336S",
+        "site_name": "TOTAL_-_ST_MARTIN_HERES_-_PS",
+        "latitude": 45.18915485484794,
+        "longitude": 5.754591787709392,
+        "agents": [
+            {
+                "agent_name": "SMILI",
+                "latitude": 45.7630243,
+                "longitude": 4.8833063
+            }
+        ]
+    },
+    {
+        "site_id": "001821C",
+        "site_name": "BNP_-_LOGIDIS_CORBAS",
+        "latitude": 45.678906256950384,
+        "longitude": 4.928103324726748,
+        "agents": [
+            {
+                "agent_name": "VROH BI",
+                "latitude": 45.7582817,
+                "longitude": 4.8566184
+            }
+        ]
+    }
+]
