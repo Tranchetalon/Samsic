@@ -42,14 +42,6 @@
                             fillOpacity: 0.5
                         }).addTo(map);
 
-                        var tooltip = L.tooltip({ permanent: false, interactive: true })
-                            .setContent(site.site_name)
-                            .setLatLng([site.latitude, site.longitude]);
-
-                        siteMarker.on('click', function() {
-                            tooltip.addTo(map);
-                        });
-
                         var content = `
                             <b>${site.site_name}</b><br>
                             <button class="toggle-employees" data-site-id="${site.site_id}" data-employees='${JSON.stringify(site.agents)}' data-lat="${site.latitude}" data-lon="${site.longitude}">Afficher agents</button>
