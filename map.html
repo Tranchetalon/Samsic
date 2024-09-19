@@ -20,9 +20,15 @@
             }).addTo(map);
 
             // Charger les données JSON
-            fetch('https://drive.google.com/uc?export=download&id=10aXWJkITUUujcPIdTV-awkP9i7bapKwB')
-                .then(response => response.json())
+            fetch('data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
                 .then(sitesData => {
+                    console.log('Données JSON chargées:', sitesData);
                     var employeeMarkers = {};
                     var employeeLines = {};
 
