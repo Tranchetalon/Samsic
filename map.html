@@ -52,7 +52,7 @@
                         // Ajuster la taille de l'octogone en fonction du niveau de zoom
                         map.on('zoomend', function() {
                             var zoomLevel = map.getZoom();
-                            var newRadius = Math.max(0.0002, 0.200 - (zoomLevel - 3) * 0.01);
+                            var newRadius = Math.max(0.0002, 0.200 * Math.pow(0.5, zoomLevel - 10));
                             var newPoints = [];
                             for (var i = 0; i < 8; i++) {
                                 var angle = Math.PI * 2 * i / 8;
