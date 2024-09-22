@@ -112,8 +112,8 @@
 
                             employeesData.forEach(function(emp, index) {
                                 setTimeout(() => {
-                                    var line = L.polyline([[siteLatLng.lat, siteLatLng.lng], [emp.latitude, emp.longitude]], {
-                                        color: '#00ff00',
+                                    var line = L.polyline([siteLatLng, [emp.latitude, emp.longitude]], {
+                                        color: 'black',
                                         weight: 1 // Diminuer l'épaisseur des lignes
                                     }).addTo(map);
                                     employeeLines[siteId].push(line);
