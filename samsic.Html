@@ -2,8 +2,10 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
-    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <style>
+        html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; right: 0; left: 0; }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-animation/1.0.0/leaflet-animation.js"></script>
@@ -93,30 +95,32 @@
 
                             var siteLatLng = { lat: siteLat, lng: siteLon };
 
-                            employeesData.forEach(function(emp) {
-                                var line = L.polyline([[siteLatLng.lat, siteLatLng.lng], [emp.latitude, emp.longitude]], {
-                                    color: '#ff0000',
-                                    weight: 1 // Diminuer l'épaisseur des lignes
-                                }).addTo(map);
-                                employeeLines[siteId].push(line);
+                            employeesData.forEach(function(emp, index) {
+                                setTimeout(() => {
+                                    var line = L.polyline([[siteLatLng.lat, siteLatLng.lng], [emp.latitude, emp.longitude]], {
+                                        color: '#ff0000',
+                                        weight: 1 // Diminuer l'épaisseur des lignes
+                                    }).addTo(map);
+                                    employeeLines[siteId].push(line);
 
-                                var marker = L.marker([emp.latitude, emp.longitude], {
-                                    icon: L.icon({
-                                        iconUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png',
-                                        iconSize: [25, 41],
-                                        iconAnchor: [12, 41],
-                                        popupAnchor: [1, -34],
-                                        shadowSize: [41, 41]
-                                    })
-                                }).addTo(map);
-                                marker.bindTooltip(emp.agent_name);
-                                marker.addTo(map).animate(L.marker([emp.latitude, emp.longitude]), {
-                                    duration: 1,
-                                    loop: false,
-                                    easing: L.easing.easeInOut,
-                                    autostart: false
-                                }).play();
-                                employeeMarkers[siteId].push(marker);
+                                    var marker = L.marker([emp.latitude, emp.longitude], {
+                                        icon: L.icon({
+                                            iconUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png',
+                                            iconSize: [25, 41],
+                                            iconAnchor: [12, 41],
+                                            popupAnchor: [1, -34],
+                                            shadowSize: [41, 41]
+                                        })
+                                    }).addTo(map);
+                                    marker.bindTooltip(emp.agent_name);
+                                    marker.addTo(map).animate(L.marker([emp.latitude, emp.longitude]), {
+                                        duration: 1,
+                                        loop: false,
+                                        easing: L.easing.easeInOut,
+                                        autostart: false
+                                    }).play();
+                                    employeeMarkers[siteId].push(marker);
+                                }, index * 500); // Ajouter un délai entre chaque affichage
                             });
                         } else {
                             // Basculer la visibilité des marqueurs et des lignes existants
