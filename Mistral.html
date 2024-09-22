@@ -48,8 +48,8 @@
                         }
 
                         var siteMarker = L.polygon(points, {
-                            color: 'green',
-                            fillColor: 'green',
+                            color: 'pink',
+                            fillColor: 'pink',
                             fillOpacity: 0.5
                         }).addTo(map);
 
@@ -130,9 +130,9 @@
                                     marker.bindTooltip(emp.agent_name);
                                     marker.addTo(map).animate(L.marker([emp.latitude, emp.longitude]), {
                                         duration: 1,
-                                        loop: false,
-                                        easing: L.easing.linear, // Utiliser une fonction d'assouplissement linéaire
-                                        autostart: false
+                                        loop: true,
+                                        easing: L.easing.bounce,
+                                        autostart: true
                                     }).play();
                                     employeeMarkers[siteId].push(marker);
                                 }, index * 500); // Ajouter un délai entre chaque affichage
