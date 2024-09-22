@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-animation/1.0.0/leaflet-animation.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-animation/1.0.0/leaflet-animation.min.css"/>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        // Initialiser la carte Leaflet après le chargement complet du DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            var map = L.map('map').setView([48.8566, 2.3522], 6); // Coordonnées de Paris, France
+
+            // Ajouter une couche de tuiles OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Charger les données JSON
+            fetch('data.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(sitesData => {
+                    console.log('Données JSON chargées:', sitesData);
+                    var employeeMarkers = {};
+                    var employeeLines = {};
+
+                    sitesData.forEach(function(site) {
+                        // Calculer les points de l'octogone
+                        var points = [];
+                        var radius = 0.050; // Taille initiale de l'octogone
+                        for (var i = 0; i < 8; i++) {
+                            var angle = Math.PI * 2 * i / 8;
+                            var x = site.longitude + radius * Math.cos(angle);
+                            var y = site.latitude + radius * Math.sin(angle);
+                            points.push([y, x]);
+                        }
+
+                        var siteMarker = L.polygon(points, {
+                            color: 'blue',
+                            fillColor: 'blue',
+                            fillOpacity: 0.5
+                        }).addTo(map);
+
+                        // Ajuster la taille de l'octogone en fonction du niveau de zoom
+                        map.on('zoomend', function() {
+                            var zoomLevel = map.getZoom();
+                            var newRadius = Math.max(0.0005, 0.005 - (zoomLevel - 6) * 0.0005);
+                            var newPoints = [];
+                            for (var i = 0; i < 8; i++) {
+                                var angle = Math.PI * 2 * i / 8;
+                                var x = site.longitude + newRadius * Math.cos(angle);
+                                var y = site.latitude + newRadius * Math.sin(angle);
+                                newPoints.push([y, x]);
+                            }
+                            siteMarker.setLatLngs(newPoints);
+                        });
+
+                        var content = `
+                            <b>${site.site_name}</b><br>
+                            <button class="toggle-employees" data-site-id="${site.site_id}" data-employees='${JSON.stringify(site.agents)}' data-lat="${site.latitude}" data-lon="${site.longitude}">Afficher/Masquer agents</button>
+                        `;
+
+                        siteMarker.bindPopup(content);
+                    });
+
+                    document.body.addEventListener('click', function(event) {
+                        if (event.target.classList.contains('toggle-employees')) {
+                            var siteId = event.target.getAttribute('data-site-id');
+                            var employeesData = JSON.parse(event.target.getAttribute('data-employees'));
+                            var siteLat = parseFloat(event.target.getAttribute('data-lat'));
+                            var siteLon = parseFloat(event.target.getAttribute('data-lon'));
+                            toggleEmployees(siteId, employeesData, siteLat, siteLon);
+                        }
+                    });
+
+                    function toggleEmployees(siteId, employeesData, siteLat, siteLon) {
+                        console.log("toggleEmployees called for site:", siteId);
+
+                        if (!employeeMarkers[siteId]) {
+                            // Créer les marqueurs et les lignes s'ils n'existent pas
+                            employeeMarkers[siteId] = [];
+                            employeeLines[siteId] = [];
+
+                            var siteLatLng = { lat: siteLat, lng: siteLon };
+
+                            employeesData.forEach(function(emp) {
+                                var line = L.polyline([[siteLatLng.lat, siteLatLng.lng], [emp.latitude, emp.longitude]], {
+                                    color: '#ff0000',
+                                    weight: 1 // Diminuer l'épaisseur des lignes
+                                }).addTo(map);
+                                employeeLines[siteId].push(line);
+
+                                var marker = L.marker([emp.latitude, emp.longitude], {
+                                    icon: L.icon({
+                                        iconUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png',
+                                        iconSize: [25, 41],
+                                        iconAnchor: [12, 41],
+                                        popupAnchor: [1, -34],
+                                        shadowSize: [41, 41]
+                                    })
+                                }).addTo(map);
+                                marker.bindTooltip(emp.agent_name);
+                                marker.addTo(map).animate(L.marker([emp.latitude, emp.longitude]), {
+                                    duration: 1,
+                                    loop: false,
+                                    easing: L.easing.easeInOut,
+                                    autostart: false
+                                }).play();
+                                employeeMarkers[siteId].push(marker);
+                            });
+                        } else {
+                            // Basculer la visibilité des marqueurs et des lignes existants
+                            employeeMarkers[siteId].forEach(function(marker) {
+                                if (map.hasLayer(marker)) {
+                                    map.removeLayer(marker);
+                                } else {
+                                    map.addLayer(marker);
+                                }
+                            });
+                            employeeLines[siteId].forEach(function(line) {
+                                if (map.hasLayer(line)) {
+                                    map.removeLayer(line);
+                                } else {
+                                    map.addLayer(line);
+                                }
+                            });
+                        }
+                    }
+                })
+                .catch(error => console.error('Erreur lors du chargement des données JSON:', error));
+        });
+    </script>
+</body>
+</html>
