@@ -88,7 +88,22 @@
                     function toggleEmployees(siteId, employeesData, siteLat, siteLon) {
                         console.log("toggleEmployees called for site:", siteId);
 
-                        if (!employeeMarkers[siteId]) {
+                        if (employeeMarkers[siteId]) {
+                            // Masquer les marqueurs et les lignes existants
+                            employeeMarkers[siteId].forEach(function(marker) {
+                                if (map.hasLayer(marker)) {
+                                    map.removeLayer(marker);
+                                }
+                            });
+                            employeeLines[siteId].forEach(function(line) {
+                                if (map.hasLayer(line)) {
+                                    map.removeLayer(line);
+                                }
+                            });
+                            // Effacer les données pour ce site
+                            employeeMarkers[siteId] = [];
+                            employeeLines[siteId] = [];
+                        } else {
                             // Créer les marqueurs et les lignes s'ils n'existent pas
                             employeeMarkers[siteId] = [];
                             employeeLines[siteId] = [];
@@ -122,21 +137,6 @@
                                     employeeMarkers[siteId].push(marker);
                                 }, index * 500); // Ajouter un délai entre chaque affichage
                             });
-                        } else {
-                            // Masquer les marqueurs et les lignes existants
-                            employeeMarkers[siteId].forEach(function(marker) {
-                                if (map.hasLayer(marker)) {
-                                    map.removeLayer(marker);
-                                }
-                            });
-                            employeeLines[siteId].forEach(function(line) {
-                                if (map.hasLayer(line)) {
-                                    map.removeLayer(line);
-                                }
-                            });
-                            // Effacer les données pour ce site
-                            employeeMarkers[siteId] = [];
-                            employeeLines[siteId] = [];
                         }
                     }
                 })
