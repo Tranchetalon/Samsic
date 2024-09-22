@@ -61,21 +61,24 @@ document.addEventListener('DOMContentLoaded', function() {
             function toggleEmployees(siteId, employeesData, siteLat, siteLon) {
                 console.log("toggleEmployees called for site:", siteId);
 
-                if (!employeeMarkers[siteId]) {
-                    // Créer les lignes et les marqueurs s'ils n'existent pas
+                if (!employeeMarkers[siteId] || employeeMarkers[siteId].length === 0) {
+                    // Créer les marqueurs et les lignes s'ils n'existent pas
                     employeeMarkers[siteId] = [];
                     employeeLines[siteId] = [];
 
                     var siteLatLng = L.latLng(siteLat, siteLon);
 
-                    employeesData.forEach(function(emp) {
+                    employeesData.forEach(function(emp, index) {
                         var empLatLng = L.latLng(emp.latitude, emp.longitude);
+                        
+                        // Créer la ligne
                         var line = L.polyline([siteLatLng, siteLatLng], {
                             color: '#ff0000',
                             weight: 2
                         }).addTo(map);
                         employeeLines[siteId].push(line);
 
+                        // Créer le marqueur
                         var marker = L.marker(empLatLng, {
                             icon: L.icon({
                                 iconUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png',
@@ -83,47 +86,31 @@ document.addEventListener('DOMContentLoaded', function() {
                                 iconAnchor: [12, 41],
                                 popupAnchor: [1, -34],
                                 shadowSize: [41, 41]
-                            }),
-                            bounceOnAdd: true,
-                            bounceOnAddOptions: {
-                                duration: 500,
-                                height: 50,
-                                function: function() {
-                                    (console.log("Marker bounced"));
-                                }
-                            }
+                            })
                         });
                         marker.bindTooltip(emp.agent_name);
                         employeeMarkers[siteId].push(marker);
-                    });
 
-                    // Animation des lignes et des marqueurs
-                    var animationDuration = 2000; // 2 secondes pour l'animation complète
-                    var steps = 100; // Nombre d'étapes pour l'animation
-                    var delay = animationDuration / steps;
+                        // Animation de la ligne
+                        var lineLength = siteLatLng.distanceTo(empLatLng);
+                        var numSteps = 100;
+                        var stepLength = lineLength / numSteps;
+                        var step = 0;
 
-                    employeeLines[siteId].forEach(function(line, index) {
-                        var start = siteLatLng;
-                        var end = L.latLng(employeesData[index].latitude, employeesData[index].longitude);
-                        var latlngs = [start, start];
-
-                        for (var i = 0; i <= steps; i++) {
-                            setTimeout((function(i) {
-                                return function() {
-                                    var point = L.latLng(
-                                        start.lat + (end.lat - start.lat) * i / steps,
-                                        start.lng + (end.lng - start.lng) * i / steps
-                                    );
-                                    latlngs[1] = point;
-                                    line.setLatLngs(latlngs);
-
-                                    if (i === steps) {
-                                        // Ajouter le marqueur avec l'effet de rebond une fois la ligne complète
-                                        employeeMarkers[siteId][index].addTo(map);
-                                    }
-                                };
-                            })(i), i * delay);
+                        function animateLine() {
+                            if (step <= numSteps) {
+                                var point = L.GeometryUtil.interpolateOnLine(map, [siteLatLng, empLatLng], step * stepLength / lineLength);
+                                line.setLatLngs([siteLatLng, point.latLng]);
+                                step++;
+                                requestAnimationFrame(animateLine);
+                            } else {
+                                // Ajouter le marqueur avec effet de rebond
+                                marker.addTo(map);
+                                bounceMarker(marker);
+                            }
                         }
+
+                        animateLine();
                     });
                 } else {
                     // Basculer la visibilité des marqueurs et des lignes existants
@@ -132,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             map.removeLayer(marker);
                         } else {
                             marker.addTo(map);
+                            bounceMarker(marker);
                         }
                     });
                     employeeLines[siteId].forEach(function(line) {
@@ -142,6 +130,43 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     });
                 }
+            }
+
+            function bounceMarker(marker) {
+                var originalLatLng = marker.getLatLng();
+                var bounceHeight = 20; // hauteur du rebond en pixels
+                var duration = 1000; // durée de l'animation en millisecondes
+                var numBounces = 3; // nombre de rebonds
+
+                function bounce() {
+                    var bounceCount = 0;
+                    var startTime = null;
+
+                    function step(timestamp) {
+                        if (!startTime) startTime = timestamp;
+                        var progress = (timestamp - startTime) / duration;
+
+                        if (progress < 1) {
+                            var heightOffset = Math.sin(progress * Math.PI) * bounceHeight;
+                            var newLatLng = map.layerPointToLatLng(
+                                map.latLngToLayerPoint(originalLatLng)._add([0, -heightOffset])
+                            );
+                            marker.setLatLng(newLatLng);
+                            requestAnimationFrame(step);
+                        } else {
+                            marker.setLatLng(originalLatLng);
+                            bounceCount++;
+                            if (bounceCount < numBounces) {
+                                startTime = null;
+                                requestAnimationFrame(step);
+                            }
+                        }
+                    }
+
+                    requestAnimationFrame(step);
+                }
+
+                bounce();
             }
         })
         .catch(error => console.error('Erreur lors du chargement des données JSON:', error));
