@@ -48,8 +48,8 @@
                         }
 
                         var siteMarker = L.polygon(points, {
-                            color: 'red',
-                            fillColor: 'red',
+                            color: 'green',
+                            fillColor: 'green',
                             fillOpacity: 0.5
                         }).addTo(map);
 
@@ -113,7 +113,7 @@
                             employeesData.forEach(function(emp, index) {
                                 setTimeout(() => {
                                     var line = L.polyline([[siteLatLng.lat, siteLatLng.lng], [emp.latitude, emp.longitude]], {
-                                        color: '#ff0000',
+                                        color: '#00ff00',
                                         weight: 1 // Diminuer l'épaisseur des lignes
                                     }).addTo(map);
                                     employeeLines[siteId].push(line);
@@ -131,7 +131,7 @@
                                     marker.addTo(map).animate(L.marker([emp.latitude, emp.longitude]), {
                                         duration: 1,
                                         loop: false,
-                                        easing: L.easing.easeInOut,
+                                        easing: L.easing.linear, // Utiliser une fonction d'assouplissement linéaire
                                         autostart: false
                                     }).play();
                                     employeeMarkers[siteId].push(marker);
