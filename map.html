@@ -22,9 +22,9 @@
             // Créer une icône personnalisée pour les agents
             var agentIcon = L.icon({
                 iconUrl: 'agent.png',
-                iconSize: [64, 64], // Taille initiale de l'icône (2 fois plus grande)
-                iconAnchor: [-32, 32], // Point de l'icône qui correspondra à la position du marqueur
-                popupAnchor: [0, -64] // Point de l'icône où le popup apparaîtra
+                iconSize: [32, 32], // Taille normale de l'icône
+                iconAnchor: [16, 32], // Point de l'icône qui correspondra à la position du marqueur
+                popupAnchor: [0, -32] // Point de l'icône où le popup apparaîtra
             });
 
             // Charger les données JSON
@@ -63,7 +63,7 @@
                             var minZoom = 1; // Niveau de zoom minimum
                             var maxZoom = 18; // Niveau de zoom maximum
                             var minRadius = 0.0005; // Taille minimale
-                            var maxRadius = 0.150; // Taille initiale
+                            var maxRadius = 0.050; // Taille initiale
 
                             // Fonction exponentielle pour accélérer la réduction de la taille
                             var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.001, (zoomLevel - minZoom) / (maxZoom - minZoom));
@@ -140,9 +140,9 @@
                     // Ajuster la taille des icônes des agents en fonction du niveau de zoom
                     map.on('zoomend', function() {
                         var zoomLevel = map.getZoom();
-                        var iconSize = [64, 64]; // Taille initiale
+                        var iconSize = [32, 32]; // Taille normale
                         if (zoomLevel > 6) {
-                            iconSize = [32, 32]; // Taille après 3 niveaux de zoom
+                            iconSize = [16, 16]; // Taille après 3 niveaux de zoom
                         }
                         agentIcon.options.iconSize = iconSize;
 
