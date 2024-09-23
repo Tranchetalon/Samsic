@@ -4,19 +4,6 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-    <style>
-        .fretillement {
-            animation: fretillement 0.5s ease-in-out;
-        }
-
-        @keyframes fretillement {
-            0% { transform: scale(1); }
-            25% { transform: scale(1.1); }
-            50% { transform: scale(1); }
-            75% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-    </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
 </head>
@@ -35,7 +22,7 @@
             // Créer une icône personnalisée pour les agents
             var agentIcon = L.icon({
                 iconUrl: 'agent.png',
-                iconSize: [64, 64], // Taille normale de l'icône
+                iconSize: [64, 64], // Taille initiale de l'icône (2 fois plus grande)
                 iconAnchor: [32, 64], // Point de l'icône qui correspondra à la position du marqueur
                 popupAnchor: [0, -64] // Point de l'icône où le popup apparaîtra
             });
@@ -54,22 +41,40 @@
                     var employeeLines = {};
 
                     sitesData.forEach(function(site) {
-                        var siteMarker = L.circle([site.latitude, site.longitude], {
-                            color: 'red',
+                        // Calculer les points de l'octogone
+                        var points = [];
+                        var radius = 0.050; // Taille initiale de l'octogone (3 fois plus grand)
+                        for (var i = 0; i < 8; i++) {
+                            var angle = Math.PI * 2 * i / 8;
+                            var x = site.longitude + radius * Math.cos(angle);
+                            var y = site.latitude + radius * Math.sin(angle);
+                            points.push([y, x]);
+                        }
+
+                        var siteMarker = L.polygon(points, {
+                            color: 'blue',
                             fillColor: 'blue',
-                            fillOpacity: 0.5,
-                            radius: 7000 // Rayon en mètres
+                            fillOpacity: 0.5
                         }).addTo(map);
 
-                        // Ajuster la taille du cercle en fonction du niveau de zoom
+                        // Ajuster la taille de l'octogone en fonction du niveau de zoom
                         map.on('zoomend', function() {
                             var zoomLevel = map.getZoom();
-                            var minRadius = 500; // Taille minimale en mètres
-                            var maxRadius = 7000; // Taille initiale en mètres
+                            var minZoom = 1; // Niveau de zoom minimum
+                            var maxZoom = 18; // Niveau de zoom maximum
+                            var minRadius = 0.0005; // Taille minimale
+                            var maxRadius = 0.150; // Taille initiale
 
                             // Fonction exponentielle pour accélérer la réduction de la taille
-                            var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.001, (zoomLevel - 1) / (18 - 1));
-                            siteMarker.setRadius(newRadius);
+                            var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.001, (zoomLevel - minZoom) / (maxZoom - minZoom));
+                            var newPoints = [];
+                            for (var i = 0; i < 8; i++) {
+                                var angle = Math.PI * 2 * i / 8;
+                                var x = site.longitude + newRadius * Math.cos(angle);
+                                var y = site.latitude + newRadius * Math.sin(angle);
+                                newPoints.push([y, x]);
+                            }
+                            siteMarker.setLatLngs(newPoints);
                         });
 
                         var content = `
@@ -112,9 +117,6 @@
                                     weight: 1 // Diminuer l'épaisseur des lignes
                                 }).addTo(map);
                                 employeeLines[siteId].push(line);
-
-                                // Ajouter la classe CSS pour l'animation de fretillement
-                                marker.getElement().classList.add('fretillement');
                             });
                         } else {
                             // Basculer la visibilité des marqueurs et des lignes existants
@@ -123,8 +125,6 @@
                                     map.removeLayer(marker);
                                 } else {
                                     map.addLayer(marker);
-                                    // Ajouter la classe CSS pour l'animation de fretillement
-                                    marker.getElement().classList.add('fretillement');
                                 }
                             });
                             employeeLines[siteId].forEach(function(line) {
@@ -140,7 +140,7 @@
                     // Ajuster la taille des icônes des agents en fonction du niveau de zoom
                     map.on('zoomend', function() {
                         var zoomLevel = map.getZoom();
-                        var iconSize = [64, 64]; // Taille normale
+                        var iconSize = [64, 64]; // Taille initiale
                         if (zoomLevel > 6) {
                             iconSize = [32, 32]; // Taille après 3 niveaux de zoom
                         }
