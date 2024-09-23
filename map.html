@@ -41,49 +41,31 @@
                     var employeeLines = {};
 
                     sitesData.forEach(function(site) {
-                        // Calculer les points de l'octogone
-                        var points = [];
-                        var radius = 0.050; // Taille initiale de l'octogone (3 fois plus grand)
-                        for (var i = 0; i < 8; i++) {
-                            var angle = Math.PI * 2 * i / 8;
-                            var x = site.longitude + radius * Math.cos(angle);
-                            var y = site.latitude + radius * Math.sin(angle);
-                            points.push([y, x]);
-                        }
+    var siteMarker = L.circle([site.latitude, site.longitude], {
+        color: 'blue',
+        fillColor: 'blue',
+        fillOpacity: 0.5,
+        radius: 5000 // Rayon en mètres
+    }).addTo(map);
 
-                        var siteMarker = L.polygon(points, {
-                            color: 'blue',
-                            fillColor: 'blue',
-                            fillOpacity: 0.5
-                        }).addTo(map);
+    // Ajuster la taille du cercle en fonction du niveau de zoom
+    map.on('zoomend', function() {
+        var zoomLevel = map.getZoom();
+        var minRadius = 500; // Taille minimale en mètres
+        var maxRadius = 5000; // Taille initiale en mètres
 
-                        // Ajuster la taille de l'octogone en fonction du niveau de zoom
-                        map.on('zoomend', function() {
-                            var zoomLevel = map.getZoom();
-                            var minZoom = 1; // Niveau de zoom minimum
-                            var maxZoom = 18; // Niveau de zoom maximum
-                            var minRadius = 0.0005; // Taille minimale
-                            var maxRadius = 0.050; // Taille initiale
+        // Fonction exponentielle pour accélérer la réduction de la taille
+        var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.001, (zoomLevel - 1) / (18 - 1));
+        siteMarker.setRadius(newRadius);
+    });
 
-                            // Fonction exponentielle pour accélérer la réduction de la taille
-                            var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.001, (zoomLevel - minZoom) / (maxZoom - minZoom));
-                            var newPoints = [];
-                            for (var i = 0; i < 8; i++) {
-                                var angle = Math.PI * 2 * i / 8;
-                                var x = site.longitude + newRadius * Math.cos(angle);
-                                var y = site.latitude + newRadius * Math.sin(angle);
-                                newPoints.push([y, x]);
-                            }
-                            siteMarker.setLatLngs(newPoints);
-                        });
+    var content = `
+        <b>${site.site_name}</b><br>
+        <button class="toggle-employees" data-site-id="${site.site_id}" data-employees='${JSON.stringify(site.agents)}' data-lat="${site.latitude}" data-lon="${site.longitude}">Afficher/Masquer agents</button>
+    `;
 
-                        var content = `
-                            <b>${site.site_name}</b><br>
-                            <button class="toggle-employees" data-site-id="${site.site_id}" data-employees='${JSON.stringify(site.agents)}' data-lat="${site.latitude}" data-lon="${site.longitude}">Afficher/Masquer agents</button>
-                        `;
-
-                        siteMarker.bindPopup(content);
-                    });
+    siteMarker.bindPopup(content);
+});
 
                     document.body.addEventListener('click', function(event) {
                         if (event.target.classList.contains('toggle-employees')) {
