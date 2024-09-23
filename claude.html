@@ -2,71 +2,72 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Carte Interactive</title>
     <style>
-        html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; right: 0; left: 0; }
+        html, body {width: 100%;height: 100%;margin: 0;padding: 0;}
+        #map {position:absolute;top:0;bottom:0;right:0;left:0;}
+        @keyframes fadeInGrow {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .agent-icon {
+            animation: fadeInGrow 0.5s ease-out;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-animation/1.0.0/leaflet-animation.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-animation/1.0.0/leaflet-animation.min.css"/>
 </head>
 <body>
     <div id="map"></div>
     <script>
-        // Initialiser la carte Leaflet après le chargement complet du DOM
         document.addEventListener('DOMContentLoaded', function() {
             var map = L.map('map').setView([48.8566, 2.3522], 6); // Coordonnées de Paris, France
 
-            // Ajouter une couche de tuiles OpenStreetMap
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
-            // Charger les données JSON depuis GitHub
+            var agentIcon = L.divIcon({
+                className: 'agent-icon',
+                html: '<img src="agent.png" style="width:100%;height:100%;">',
+                iconSize: [64, 64],
+                iconAnchor: [32, 64],
+                popupAnchor: [0, -64]
+            });
+
+            var employeeMarkers = {};
+            var employeeLines = {};
+
             fetch('data.json')
                 .then(response => {
-                    console.log("Réponse reçue:", response);
                     if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.statusText);
+                        throw new Error('Network response was not ok');
                     }
                     return response.json();
                 })
                 .then(sitesData => {
                     console.log('Données JSON chargées:', sitesData);
-                    var employeeMarkers = {};
-                    var employeeLines = {};
 
                     sitesData.forEach(function(site) {
-                        // Calculer les points de l'octogone
-                        var points = [];
-                        var radius = 0.050; // Taille initiale de l'octogone
-                        for (var i = 0; i < 8; i++) {
-                            var angle = Math.PI * 2 * i / 8;
-                            var x = site.longitude + radius * Math.cos(angle);
-                            var y = site.latitude + radius * Math.sin(angle);
-                            points.push([y, x]);
-                        }
-
-                        var siteMarker = L.polygon(points, {
+                        var siteMarker = L.circle([site.latitude, site.longitude], {
                             color: 'blue',
                             fillColor: 'blue',
-                            fillOpacity: 0.5
+                            fillOpacity: 0.5,
+                            radius: 7000 // Rayon en mètres
                         }).addTo(map);
 
-                        // Ajuster la taille de l'octogone en fonction du niveau de zoom
                         map.on('zoomend', function() {
                             var zoomLevel = map.getZoom();
-                            var newRadius = Math.max(0.0005, 0.005 - (zoomLevel - 6) * 0.0005);
-                            var newPoints = [];
-                            for (var i = 0; i < 8; i++) {
-                                var angle = Math.PI * 2 * i / 8;
-                                var x = site.longitude + newRadius * Math.cos(angle);
-                                var y = site.latitude + newRadius * Math.sin(angle);
-                                newPoints.push([y, x]);
-                            }
-                            siteMarker.setLatLngs(newPoints);
+                            var minRadius = 500; // Taille minimale en mètres
+                            var maxRadius = 7000; // Taille initiale en mètres
+
+                            var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.001, (zoomLevel - 1) / (18 - 1));
+                            siteMarker.setRadius(newRadius);
                         });
 
                         var content = `
@@ -90,122 +91,68 @@
                     function toggleEmployees(siteId, employeesData, siteLat, siteLon) {
                         console.log("toggleEmployees called for site:", siteId);
 
-                        if (!employeeMarkers[siteId] || employeeMarkers[siteId].length === 0) {
-                            // Créer les marqueurs et les lignes s'ils n'existent pas
+                        if (!employeeMarkers[siteId]) {
                             employeeMarkers[siteId] = [];
                             employeeLines[siteId] = [];
 
-                            var siteLatLng = L.latLng(siteLat, siteLon);
+                            var siteLatLng = { lat: siteLat, lng: siteLon };
 
-                            employeesData.forEach(function(emp, index) {
-                                var empLatLng = L.latLng(emp.latitude, emp.longitude);
-                                
-                                // Créer la ligne
-                                var line = L.polyline([siteLatLng, siteLatLng], {
-                                    color: '#ff0000',
-                                    weight: 2
+                            employeesData.forEach(function(emp) {
+                                var marker = L.marker([emp.latitude, emp.longitude], {
+                                    icon: agentIcon
                                 }).addTo(map);
-                                employeeLines[siteId].push(line);
-
-                                // Créer le marqueur
-                                var marker = L.marker(empLatLng, {
-                                    icon: L.icon({
-                                        iconUrl: 'https://unpkg.com/leaflet@1.9.3/dist/images/marker-icon.png',
-                                        iconSize: [25, 41],
-                                        iconAnchor: [12, 41],
-                                        popupAnchor: [1, -34],
-                                        shadowSize: [41, 41]
-                                    })
-                                });
                                 marker.bindTooltip(emp.agent_name);
                                 employeeMarkers[siteId].push(marker);
 
-                                // Animation de la ligne
-                                var lineLength = siteLatLng.distanceTo(empLatLng);
-                                var numSteps = 100;
-                                var stepLength = lineLength / numSteps;
-                                var step = 0;
+                                var line = L.polyline([[siteLatLng.lat, siteLatLng.lng], [emp.latitude, emp.longitude]], {
+                                    color: '#ff0000',
+                                    weight: 1
+                                }).addTo(map);
+                                employeeLines[siteId].push(line);
 
-                                function animateLine() {
-                                    if (step <= numSteps) {
-                                        var point = L.GeometryUtil.interpolateOnLine(map, [siteLatLng, empLatLng], step * stepLength / lineLength);
-                                        line.setLatLngs([siteLatLng, point.latLng]);
-                                        step++;
-                                        requestAnimationFrame(animateLine);
-                                    } else {
-                                        // Ajouter le marqueur avec effet de rebond
-                                        marker.addTo(map);
-                                        bounceMarker(marker);
-                                    }
-                                }
-
-                                animateLine();
+                                // Réinitialiser l'animation à chaque affichage
+                                marker.getElement().style.animation = 'none';
+                                marker.getElement().offsetHeight; // Forcer un reflow
+                                marker.getElement().style.animation = null;
                             });
                         } else {
-                            // Basculer la visibilité des marqueurs et des lignes existants
                             employeeMarkers[siteId].forEach(function(marker) {
                                 if (map.hasLayer(marker)) {
                                     map.removeLayer(marker);
                                 } else {
-                                    marker.addTo(map);
-                                    bounceMarker(marker);
+                                    map.addLayer(marker);
+                                    // Réappliquer l'animation lors de la réapparition
+                                    marker.getElement().style.animation = 'none';
+                                    marker.getElement().offsetHeight; // Forcer un reflow
+                                    marker.getElement().style.animation = null;
                                 }
                             });
                             employeeLines[siteId].forEach(function(line) {
                                 if (map.hasLayer(line)) {
                                     map.removeLayer(line);
                                 } else {
-                                    line.addTo(map);
+                                    map.addLayer(line);
                                 }
                             });
                         }
                     }
 
-                    function bounceMarker(marker) {
-                        var originalLatLng = marker.getLatLng();
-                        var bounceHeight = 20; // hauteur du rebond en pixels
-                        var duration = 1000; // durée de l'animation en millisecondes
-                        var numBounces = 3; // nombre de rebonds
-
-                        function bounce() {
-                            var bounceCount = 0;
-                            var startTime = null;
-
-                            function step(timestamp) {
-                                if (!startTime) startTime = timestamp;
-                                var progress = (timestamp - startTime) / duration;
-
-                                if (progress < 1) {
-                                    var heightOffset = Math.sin(progress * Math.PI) * bounceHeight;
-                                    var newLatLng = map.layerPointToLatLng(
-                                        map.latLngToLayerPoint(originalLatLng)._add([0, -heightOffset])
-                                    );
-                                    marker.setLatLng(newLatLng);
-                                    requestAnimationFrame(step);
-                                } else {
-                                    marker.setLatLng(originalLatLng);
-                                    bounceCount++;
-                                    if (bounceCount < numBounces) {
-                                        startTime = null;
-                                        requestAnimationFrame(step);
-                                    }
-                                }
-                            }
-
-                            requestAnimationFrame(step);
+                    map.on('zoomend', function() {
+                        var zoomLevel = map.getZoom();
+                        var iconSize = [64, 64]; // Taille normale
+                        if (zoomLevel > 6) {
+                            iconSize = [32, 32]; // Taille après 3 niveaux de zoom
                         }
+                        agentIcon.options.iconSize = iconSize;
 
-                        bounce();
-                    }
+                        for (var siteId in employeeMarkers) {
+                            employeeMarkers[siteId].forEach(function(marker) {
+                                marker.setIcon(agentIcon);
+                            });
+                        }
+                    });
                 })
-                .catch(error => {
-                    console.error('Erreur lors du chargement des données JSON:', error);
-                    // Afficher l'erreur sur la carte pour faciliter le débogage
-                    var errorMessage = L.popup()
-                        .setLatLng(map.getCenter())
-                        .setContent('Erreur de chargement : ' + error.message)
-                        .openOn(map);
-                });
+                .catch(error => console.error('Erreur lors du chargement des données JSON:', error));
         });
     </script>
 </body>
