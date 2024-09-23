@@ -66,7 +66,7 @@
                             var maxRadius = 0.150; // Taille initiale
 
                             // Fonction exponentielle pour accélérer la réduction de la taille
-                            var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.5, (zoomLevel - minZoom) / (maxZoom - minZoom));
+                            var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.3, (zoomLevel - minZoom) / (maxZoom - minZoom));
                             var newPoints = [];
                             for (var i = 0; i < 8; i++) {
                                 var angle = Math.PI * 2 * i / 8;
