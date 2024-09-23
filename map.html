@@ -45,14 +45,14 @@
         color: 'blue',
         fillColor: 'blue',
         fillOpacity: 0.5,
-        radius: 5000 // Rayon en mètres
+        radius: 7000 // Rayon en mètres
     }).addTo(map);
 
     // Ajuster la taille du cercle en fonction du niveau de zoom
     map.on('zoomend', function() {
         var zoomLevel = map.getZoom();
         var minRadius = 500; // Taille minimale en mètres
-        var maxRadius = 5000; // Taille initiale en mètres
+        var maxRadius = 7000; // Taille initiale en mètres
 
         // Fonction exponentielle pour accélérer la réduction de la taille
         var newRadius = minRadius + (maxRadius - minRadius) * Math.pow(0.001, (zoomLevel - 1) / (18 - 1));
