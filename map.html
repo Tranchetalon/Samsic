@@ -60,7 +60,7 @@
                         // Ajuster la taille de l'octogone en fonction du niveau de zoom
                         map.on('zoomend', function() {
                             var zoomLevel = map.getZoom();
-                            var newRadius = Math.max(0.0005, 0.015 - (zoomLevel - 6) * 0.0005);
+                            var newRadius = Math.max(0.0005, 0.150 - (zoomLevel - 6) * 0.015);
                             var newPoints = [];
                             for (var i = 0; i < 8; i++) {
                                 var angle = Math.PI * 2 * i / 8;
@@ -139,6 +139,13 @@
                             iconSize = [32, 32]; // Taille après 3 niveaux de zoom
                         }
                         agentIcon.options.iconSize = iconSize;
+
+                        // Mettre à jour les icônes des agents existants
+                        for (var siteId in employeeMarkers) {
+                            employeeMarkers[siteId].forEach(function(marker) {
+                                marker.setIcon(agentIcon);
+                            });
+                        }
                     });
                 })
                 .catch(error => console.error('Erreur lors du chargement des données JSON:', error));
