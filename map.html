@@ -22,9 +22,9 @@
             // Créer une icône personnalisée pour les agents
             var agentIcon = L.icon({
                 iconUrl: 'agent.png',
-                iconSize: [32, 32], // Taille de l'icône
-                iconAnchor: [16, 32], // Point de l'icône qui correspondra à la position du marqueur
-                popupAnchor: [0, -32] // Point de l'icône où le popup apparaîtra
+                iconSize: [64, 64], // Taille initiale de l'icône (2 fois plus grande)
+                iconAnchor: [32, 64], // Point de l'icône qui correspondra à la position du marqueur
+                popupAnchor: [0, -64] // Point de l'icône où le popup apparaîtra
             });
 
             // Charger les données JSON
@@ -43,7 +43,7 @@
                     sitesData.forEach(function(site) {
                         // Calculer les points de l'octogone
                         var points = [];
-                        var radius = 0.050; // Taille initiale de l'octogone
+                        var radius = 0.150; // Taille initiale de l'octogone (3 fois plus grand)
                         for (var i = 0; i < 8; i++) {
                             var angle = Math.PI * 2 * i / 8;
                             var x = site.longitude + radius * Math.cos(angle);
@@ -60,7 +60,7 @@
                         // Ajuster la taille de l'octogone en fonction du niveau de zoom
                         map.on('zoomend', function() {
                             var zoomLevel = map.getZoom();
-                            var newRadius = Math.max(0.0005, 0.005 - (zoomLevel - 6) * 0.0005);
+                            var newRadius = Math.max(0.0005, 0.015 - (zoomLevel - 6) * 0.0005);
                             var newPoints = [];
                             for (var i = 0; i < 8; i++) {
                                 var angle = Math.PI * 2 * i / 8;
@@ -130,6 +130,16 @@
                             });
                         }
                     }
+
+                    // Ajuster la taille des icônes des agents en fonction du niveau de zoom
+                    map.on('zoomend', function() {
+                        var zoomLevel = map.getZoom();
+                        var iconSize = [64, 64]; // Taille initiale
+                        if (zoomLevel > 6) {
+                            iconSize = [32, 32]; // Taille après 3 niveaux de zoom
+                        }
+                        agentIcon.options.iconSize = iconSize;
+                    });
                 })
                 .catch(error => console.error('Erreur lors du chargement des données JSON:', error));
         });
