@@ -19,6 +19,14 @@
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
 
+            // Créer une icône personnalisée pour les agents
+            var agentIcon = L.icon({
+                iconUrl: 'agent.png',
+                iconSize: [32, 32], // Taille de l'icône
+                iconAnchor: [16, 32], // Point de l'icône qui correspondra à la position du marqueur
+                popupAnchor: [0, -32] // Point de l'icône où le popup apparaîtra
+            });
+
             // Charger les données JSON
             fetch('data.json')
                 .then(response => {
@@ -92,11 +100,8 @@
                             var siteLatLng = { lat: siteLat, lng: siteLon };
 
                             employeesData.forEach(function(emp) {
-                                var marker = L.circleMarker([emp.latitude, emp.longitude], {
-                                    radius: 10,
-                                    color: '#ff0000', // Utiliser une couleur fixe pour les employés
-                                    fillColor: '#ff0000',
-                                    fillOpacity: 0.7
+                                var marker = L.marker([emp.latitude, emp.longitude], {
+                                    icon: agentIcon
                                 }).addTo(map);
                                 marker.bindTooltip(emp.agent_name);
                                 employeeMarkers[siteId].push(marker);
