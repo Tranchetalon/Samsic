@@ -23,7 +23,7 @@
             var agentIcon = L.icon({
                 iconUrl: 'agent.png',
                 iconSize: [64, 64], // Taille initiale de l'icône (2 fois plus grande)
-                iconAnchor: [0, 0], // Point de l'icône qui correspondra à la position du marqueur
+                iconAnchor: [-32, 32], // Point de l'icône qui correspondra à la position du marqueur
                 popupAnchor: [0, -64] // Point de l'icône où le popup apparaîtra
             });
 
@@ -52,7 +52,7 @@
                         }
 
                         var siteMarker = L.polygon(points, {
-                            color: 'blue',
+                            color: 'red',
                             fillColor: 'blue',
                             fillOpacity: 0.5
                         }).addTo(map);
@@ -142,7 +142,7 @@
                         var zoomLevel = map.getZoom();
                         var iconSize = [64, 64]; // Taille initiale
                         if (zoomLevel > 6) {
-                            iconSize = [64, 64]; // Taille après 3 niveaux de zoom
+                            iconSize = [32, 32]; // Taille après 3 niveaux de zoom
                         }
                         agentIcon.options.iconSize = iconSize;
 
