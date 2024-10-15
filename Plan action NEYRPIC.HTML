@@ -328,6 +328,12 @@
             });
         }
 
+        // Expose functions to the global scope
+        window.openModal = openModal;
+        window.addEvent = addEvent;
+        window.editEvent = editEvent;
+        window.deleteEvent = deleteEvent;
+
         // Ensure createCalendar is called after the page loads
         window.onload = createCalendar;
     </script>
