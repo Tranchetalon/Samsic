@@ -68,7 +68,7 @@
             padding: 5px;
             border-radius: 3px;
             word-wrap: break-word;
-            position: relative;
+	    position: relative;
         }
         .event-actions {
             position: absolute;
@@ -149,6 +149,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
 
     <script>
+        // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyCWDiZhS8jL393Pqkp-OXkSb6eWhv9dq6w",
             authDomain: "samsic-bron.firebaseapp.com",
@@ -159,6 +160,7 @@
             appId: "1:1084633970213:web:fb0533960966ec828371cc"
         };
 
+        // Initialize Firebase
         const app = firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
@@ -190,6 +192,9 @@
                 calendar.appendChild(dayElement);
                 currentDate.setDate(currentDate.getDate() + 1);
             }
+
+            // Load events from Firebase
+            loadEventsFromFirebase();
         }
 
         function openModal(date) {
@@ -203,53 +208,125 @@
             const color = document.getElementById('eventColor').value;
             const textColor = document.getElementById('textColor').value;
 
-            const eventData = {
-                title: title,
-                description: description,
-                color: color,
-                textColor: textColor,
-                date: selectedDate.toISOString().split('T')[0]
-            };
+            const eventElement = document.createElement('div');
+            eventElement.className = 'event';
+            eventElement.style.backgroundColor = color;
+            eventElement.style.color = textColor;
+            eventElement.innerHTML = `
+                <strong>${title}</strong>
+                <p>${description}</p>
+                <div class="event-actions">
+                    <span class="event-action" onclick="editEvent(this)">✏️</span>
+                    <span class="event-action" onclick="deleteEvent(this)">❌</span>
+                </div>
+            `;
 
-            // Enregistrer dans Firebase
-            const dateKey = eventData.date.replace(/\//g, '-');
-            database.ref('events/' + dateKey).push(eventData);
+            const dateString = selectedDate.toISOString().split('T')[0];
+            const dayElement = document.querySelector(`.day[data-date="${dateString}"]`);
+            if (dayElement) {
+                dayElement.querySelector('.events').appendChild(eventElement);
+            }
 
-            displayEvent(eventData);
+            // Save event to Firebase
+            saveEventToFirebase(dateString, title, description, color, textColor);
 
             document.getElementById('eventModal').style.display = 'none';
             document.getElementById('eventTitle').value = '';
             document.getElementById('eventDescription').value = '';
         }
 
-        function displayEvent(eventData) {
-            const eventElement = document.createElement('div');
-            eventElement.className = 'event';
-            eventElement.style.backgroundColor = eventData.color;
-            eventElement.style.color = eventData.textColor;
-            eventElement.innerHTML = `<strong>${eventData.title}</strong><p>${eventData.description}</p>`;
+        function editEvent(element) {
+            const eventDiv = element.closest('.event');
+            const title = eventDiv.querySelector('strong').textContent;
+            const description = eventDiv.querySelector('p').textContent;
+            const color = eventDiv.style.backgroundColor;
+            const textColor = eventDiv.style.color;
 
-            const dayElement = document.querySelector(`.day[data-date="${eventData.date}"]`);
-            if (dayElement) {
-                dayElement.querySelector('.events').appendChild(eventElement);
+            document.getElementById('eventTitle').value = title;
+            document.getElementById('eventDescription').value = description;
+            document.getElementById('eventColor').value = rgbToHex(color);
+            document.getElementById('textColor').value = rgbToHex(textColor);
+
+            selectedDate = new Date(eventDiv.closest('.day').dataset.date);
+            document.getElementById('eventModal').style.display = 'block';
+
+            // Supprimer l'ancien événement
+            eventDiv.remove();
+        }
+
+        function deleteEvent(element) {
+            if (confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')) {
+                const eventDiv = element.closest('.event');
+                const dateString = eventDiv.closest('.day').dataset.date;
+                const title = eventDiv.querySelector('strong').textContent;
+
+                // Remove event from Firebase
+                removeEventFromFirebase(dateString, title);
+
+                eventDiv.remove();
             }
         }
 
-        function loadEvents() {
-            database.ref('events').once('value', function(snapshot) {
-                snapshot.forEach(function(eventSnapshot) {
-                    eventSnapshot.forEach(function(eventDataSnapshot) {
-                        const eventData = eventDataSnapshot.val();
-                        displayEvent(eventData);
+        function rgbToHex(rgb) {
+            // Convert RGB to HEX
+            const rgbArray = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            if (!rgbArray) return rgb; // If it's already a hex value or invalid
+            const hex = (x) => ("0" + parseInt(x).toString(16)).slice(-2);
+            return "#" + hex(rgbArray[1]) + hex(rgbArray[2]) + hex(rgbArray[3]);
+        }
+
+        function saveEventToFirebase(date, title, description, color, textColor) {
+            const eventsRef = database.ref('events/' + date);
+            eventsRef.push({
+                title: title,
+                description: description,
+                color: color,
+                textColor: textColor
+            });
+        }
+
+        function loadEventsFromFirebase() {
+            const eventsRef = database.ref('events');
+            eventsRef.on('value', (snapshot) => {
+                const events = snapshot.val();
+                if (events) {
+                    Object.keys(events).forEach((date) => {
+                        const dayElement = document.querySelector(`.day[data-date="${date}"]`);
+                        if (dayElement) {
+                            const eventsContainer = dayElement.querySelector('.events');
+                            eventsContainer.innerHTML = '';
+                            Object.keys(events[date]).forEach((key) => {
+                                const event = events[date][key];
+                                const eventElement = document.createElement('div');
+                                eventElement.className = 'event';
+                                eventElement.style.backgroundColor = event.color;
+                                eventElement.style.color = event.textColor;
+                                eventElement.innerHTML = `
+                                    <strong>${event.title}</strong>
+                                    <p>${event.description}</p>
+                                    <div class="event-actions">
+                                        <span class="event-action" onclick="editEvent(this)">✏️</span>
+                                        <span class="event-action" onclick="deleteEvent(this)">❌</span>
+                                    </div>
+                                `;
+                                eventsContainer.appendChild(eventElement);
+                            });
+                        }
                     });
+                }
+            });
+        }
+
+        function removeEventFromFirebase(date, title) {
+            const eventsRef = database.ref('events/' + date);
+            eventsRef.orderByChild('title').equalTo(title).once('value', (snapshot) => {
+                snapshot.forEach((childSnapshot) => {
+                    childSnapshot.ref.remove();
                 });
             });
         }
 
-        window.onload = function() {
-            createCalendar();
-            loadEvents();
-        };
+        createCalendar();
     </script>
 </body>
 </html>
