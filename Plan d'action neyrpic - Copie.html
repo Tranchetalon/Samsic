@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLAN D'ACTION NEYRPIC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 250px;
+            max-height: 100px;
+            object-fit: contain;
+        }
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: 20px;
+        }
+        .day {
+            border: 1px solid #ddd;
+            padding: 10px;
+            min-height: 100px;
+            position: relative;
+        }
+        .weekend {
+            background-color: #f0f0f0;
+        }
+        .day-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .date {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .add-event {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #003366;
+        }
+        .event {
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 3px;
+            word-wrap: break-word;
+	    position: relative;
+        }
+        .event-actions {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+        }
+        .event-action {
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 12px;
+        
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        input, textarea, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://www.apsysgroup.com/wp-content/uploads/2018/09/LOGO_Neyrpic-copie-1.jpg" alt="Logo Neyrpic" class="logo">
+            <img src="https://www.agoramanagers-events.com/wp-content/uploads/importedmedia/partenaires/partenaire-9889.png" alt="Logo Samsic Sécurité" class="logo">
+        </div>
+        <h1>PLAN D'ACTION NEYRPIC</h1>
+    </div>
+
+    <div class="calendar" id="calendar"></div>
+
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ajouter un événement</h2>
+            <input type="text" id="eventTitle" placeholder="Titre de l'événement">
+            <textarea id="eventDescription" placeholder="Description de l'événement"></textarea>
+            <label for="eventColor">Couleur de fond :</label>
+            <input type="color" id="eventColor" value="#003366">
+            <label for="textColor">Couleur du texte :</label>
+            <input type="color" id="textColor" value="#ffffff">
+            <button onclick="addEvent()">Ajouter</button>
+        </div>
+    </div>
+
+    <script>
+        const startDate = new Date(2024, 9, 14);
+        const endDate = new Date(2024, 10, 3);
+        let selectedDate;
+
+        const dayNames = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+
+        function createCalendar() {
+            const calendar = document.getElementById('calendar');
+            calendar.innerHTML = '';
+
+            let currentDate = new Date(startDate);
+            while (currentDate <= endDate) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'day';
+                const dayOfWeek = currentDate.getDay();
+                if (dayOfWeek === 0 || dayOfWeek === 6) {
+                    dayElement.classList.add('weekend');
+                }
+                dayElement.innerHTML = `
+                    <div class="day-name">${dayNames[dayOfWeek]}</div>
+                    <div class="date">${currentDate.getDate()}/${currentDate.getMonth() + 1}</div>
+                    <div class="add-event" onclick="openModal('${currentDate.toISOString()}')">+</div>
+                    <div class="events"></div>
+                `;
+                dayElement.setAttribute('data-date', currentDate.toISOString().split('T')[0]);
+                calendar.appendChild(dayElement);
+                currentDate.setDate(currentDate.getDate() + 1);
+            }
+        }
+
+        function openModal(date) {
+            selectedDate = new Date(date);
+            document.getElementById('eventModal').style.display = 'block';
+        }
+
+         function addEvent() {
+            const title = document.getElementById('eventTitle').value;
+            const description = document.getElementById('eventDescription').value;
+            const color = document.getElementById('eventColor').value;
+            const textColor = document.getElementById('textColor').value;
+
+            const eventElement = document.createElement('div');
+            eventElement.className = 'event';
+            eventElement.style.backgroundColor = color;
+            eventElement.style.color = textColor;
+            eventElement.innerHTML = `
+                <strong>${title}</strong>
+                <p>${description}</p>
+                <div class="event-actions">
+                    <span class="event-action" onclick="editEvent(this)">✏️</span>
+                    <span class="event-action" onclick="deleteEvent(this)">❌</span>
+                </div>
+            `;
+
+            const dateString = selectedDate.toISOString().split('T')[0];
+            const dayElement = document.querySelector(`.day[data-date="${dateString}"]`);
+            if (dayElement) {
+                dayElement.querySelector('.events').appendChild(eventElement);
+            }
+
+            document.getElementById('eventModal').style.display = 'none';
+            document.getElementById('eventTitle').value = '';
+            document.getElementById('eventDescription').value = '';
+        }
+
+        function editEvent(element) {
+            const eventDiv = element.closest('.event');
+            const title = eventDiv.querySelector('strong').textContent;
+            const description = eventDiv.querySelector('p').textContent;
+            const color = eventDiv.style.backgroundColor;
+            const textColor = eventDiv.style.color;
+
+            document.getElementById('eventTitle').value = title;
+            document.getElementById('eventDescription').value = description;
+            document.getElementById('eventColor').value = rgbToHex(color);
+            document.getElementById('textColor').value = rgbToHex(textColor);
+
+            selectedDate = new Date(eventDiv.closest('.day').dataset.date);
+            document.getElementById('eventModal').style.display = 'block';
+
+            // Supprimer l'ancien événement
+            eventDiv.remove();
+        }
+
+        function deleteEvent(element) {
+            if (confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')) {
+                element.closest('.event').remove();
+            }
+        }
+
+        function rgbToHex(rgb) {
+            // Convert RGB to HEX
+            const rgbArray = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+            if (!rgbArray) return rgb; // If it's already a hex value or invalid
+            const hex = (x) => ("0" + parseInt(x).toString(16)).slice(-2);
+            return "#" + hex(rgbArray[1]) + hex(rgbArray[2]) + hex(rgbArray[3]);
+        }
+
+        createCalendar();
+    </script>
+</body>
+</html>
