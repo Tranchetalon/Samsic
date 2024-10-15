@@ -145,28 +145,25 @@
     </div>
 
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import { getDatabase, ref, push, onValue, query, orderByChild, equalTo, remove } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
-   <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCWDiZhS8jL393Pqkp-OXkSb6eWhv9dq6w",
+            authDomain: "samsic-bron.firebaseapp.com",
+            databaseURL: "https://samsic-bron-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "samsic-bron",
+            storageBucket: "samsic-bron.appspot.com",
+            messagingSenderId: "1084633970213",
+            appId: "1:1084633970213:web:fb0533960966ec828371cc"
+        };
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCWDiZhS8jL393Pqkp-OXkSb6eWhv9dq6w",
-    authDomain: "samsic-bron.firebaseapp.com",
-    databaseURL: "https://samsic-bron-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "samsic-bron",
-    storageBucket: "samsic-bron.appspot.com",
-    messagingSenderId: "1084633970213",
-    appId: "1:1084633970213:web:fb0533960966ec828371cc"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
 
         const startDate = new Date(2024, 9, 14);
         const endDate = new Date(2024, 10, 3);
@@ -280,8 +277,8 @@
         }
 
         function saveEventToFirebase(date, title, description, color, textColor) {
-            const eventsRef = database.ref('events/' + date);
-            eventsRef.push({
+            const eventsRef = ref(database, 'events/' + date);
+            push(eventsRef, {
                 title: title,
                 description: description,
                 color: color,
@@ -290,8 +287,8 @@
         }
 
         function loadEventsFromFirebase() {
-            const eventsRef = database.ref('events');
-            eventsRef.on('value', (snapshot) => {
+            const eventsRef = ref(database, 'events');
+            onValue(eventsRef, (snapshot) => {
                 const events = snapshot.val();
                 if (events) {
                     Object.keys(events).forEach((date) => {
@@ -322,15 +319,17 @@
         }
 
         function removeEventFromFirebase(date, title) {
-            const eventsRef = database.ref('events/' + date);
-            eventsRef.orderByChild('title').equalTo(title).once('value', (snapshot) => {
+            const eventsRef = ref(database, 'events/' + date);
+            const queryRef = query(eventsRef, orderByChild('title'), equalTo(title));
+            onValue(queryRef, (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
-                    childSnapshot.ref.remove();
+                    remove(childSnapshot.ref);
                 });
             });
         }
 
-        createCalendar();
+        // Ensure createCalendar is called after the page loads
+        window.onload = createCalendar;
     </script>
 </body>
 </html>
