@@ -68,7 +68,7 @@
             padding: 5px;
             border-radius: 3px;
             word-wrap: break-word;
-	        position: relative;
+            position: relative;
         }
         .event-actions {
             position: absolute;
@@ -144,7 +144,24 @@
         </div>
     </div>
 
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
     <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCWDiZhS8jL393Pqkp-OXkSb6eWhv9dq6w",
+            authDomain: "samsic-bron.firebaseapp.com",
+            databaseURL: "https://samsic-bron-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "samsic-bron",
+            storageBucket: "samsic-bron.appspot.com",
+            messagingSenderId: "1084633970213",
+            appId: "1:1084633970213:web:fb0533960966ec828371cc"
+        };
+
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
         const startDate = new Date(2024, 9, 14);
         const endDate = new Date(2024, 10, 3);
         let selectedDate;
@@ -196,7 +213,7 @@
 
             // Enregistrer dans Firebase
             const dateKey = eventData.date.replace(/\//g, '-');
-            firebase.database().ref('events/' + dateKey).push(eventData);
+            database.ref('events/' + dateKey).push(eventData);
 
             displayEvent(eventData);
 
@@ -219,7 +236,7 @@
         }
 
         function loadEvents() {
-            firebase.database().ref('events').once('value', function(snapshot) {
+            database.ref('events').once('value', function(snapshot) {
                 snapshot.forEach(function(eventSnapshot) {
                     eventSnapshot.forEach(function(eventDataSnapshot) {
                         const eventData = eventDataSnapshot.val();
@@ -233,19 +250,6 @@
             createCalendar();
             loadEvents();
         };
-
-        // Import and initialize Firebase
-        import { initializeApp } from "firebase/app";
-        const firebaseConfig = {
-            apiKey: "AIzaSyCWDiZhS8jL393Pqkp-OXkSb6eWhv9dq6w",
-            authDomain: "samsic-bron.firebaseapp.com",
-            databaseURL: "https://samsic-bron-default-rtdb.europe-west1.firebasedatabase.app",
-            projectId: "samsic-bron",
-            storageBucket: "samsic-bron.appspot.com",
-            messagingSenderId: "1084633970213",
-            appId: "1:1084633970213:web:fb0533960966ec828371cc"
-        };
-        const app = initializeApp(firebaseConfig);
     </script>
 </body>
 </html>
