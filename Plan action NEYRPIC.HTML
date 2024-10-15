@@ -68,7 +68,7 @@
             padding: 5px;
             border-radius: 3px;
             word-wrap: break-word;
-	    position: relative;
+	        position: relative;
         }
         .event-actions {
             position: absolute;
@@ -79,7 +79,6 @@
             cursor: pointer;
             margin-left: 5px;
             font-size: 12px;
-        
         }
         .modal {
             display: none;
@@ -181,85 +180,72 @@
             document.getElementById('eventModal').style.display = 'block';
         }
 
-         function addEvent() {
+        function addEvent() {
             const title = document.getElementById('eventTitle').value;
             const description = document.getElementById('eventDescription').value;
             const color = document.getElementById('eventColor').value;
             const textColor = document.getElementById('textColor').value;
 
-            const eventElement = document.createElement('div');
-            eventElement.className = 'event';
-            eventElement.style.backgroundColor = color;
-            eventElement.style.color = textColor;
-            eventElement.innerHTML = `
-                <strong>${title}</strong>
-                <p>${description}</p>
-                <div class="event-actions">
-                    <span class="event-action" onclick="editEvent(this)">✏️</span>
-                    <span class="event-action" onclick="deleteEvent(this)">❌</span>
-                </div>
-            `;
+            const eventData = {
+                title: title,
+                description: description,
+                color: color,
+                textColor: textColor,
+                date: selectedDate.toISOString().split('T')[0]
+            };
 
-            const dateString = selectedDate.toISOString().split('T')[0];
-            const dayElement = document.querySelector(`.day[data-date="${dateString}"]`);
-            if (dayElement) {
-                dayElement.querySelector('.events').appendChild(eventElement);
-            }
+            // Enregistrer dans Firebase
+            const dateKey = eventData.date.replace(/\//g, '-');
+            firebase.database().ref('events/' + dateKey).push(eventData);
+
+            displayEvent(eventData);
 
             document.getElementById('eventModal').style.display = 'none';
             document.getElementById('eventTitle').value = '';
             document.getElementById('eventDescription').value = '';
         }
 
-        function editEvent(element) {
-            const eventDiv = element.closest('.event');
-            const title = eventDiv.querySelector('strong').textContent;
-            const description = eventDiv.querySelector('p').textContent;
-            const color = eventDiv.style.backgroundColor;
-            const textColor = eventDiv.style.color;
+        function displayEvent(eventData) {
+            const eventElement = document.createElement('div');
+            eventElement.className = 'event';
+            eventElement.style.backgroundColor = eventData.color;
+            eventElement.style.color = eventData.textColor;
+            eventElement.innerHTML = `<strong>${eventData.title}</strong><p>${eventData.description}</p>`;
 
-            document.getElementById('eventTitle').value = title;
-            document.getElementById('eventDescription').value = description;
-            document.getElementById('eventColor').value = rgbToHex(color);
-            document.getElementById('textColor').value = rgbToHex(textColor);
-
-            selectedDate = new Date(eventDiv.closest('.day').dataset.date);
-            document.getElementById('eventModal').style.display = 'block';
-
-            // Supprimer l'ancien événement
-            eventDiv.remove();
-        }
-
-        function deleteEvent(element) {
-            if (confirm('Êtes-vous sûr de vouloir supprimer cet événement ?')) {
-                element.closest('.event').remove();
+            const dayElement = document.querySelector(`.day[data-date="${eventData.date}"]`);
+            if (dayElement) {
+                dayElement.querySelector('.events').appendChild(eventElement);
             }
         }
 
-        function rgbToHex(rgb) {
-            // Convert RGB to HEX
-            const rgbArray = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-            if (!rgbArray) return rgb; // If it's already a hex value or invalid
-            const hex = (x) => ("0" + parseInt(x).toString(16)).slice(-2);
-            return "#" + hex(rgbArray[1]) + hex(rgbArray[2]) + hex(rgbArray[3]);
+        function loadEvents() {
+            firebase.database().ref('events').once('value', function(snapshot) {
+                snapshot.forEach(function(eventSnapshot) {
+                    eventSnapshot.forEach(function(eventDataSnapshot) {
+                        const eventData = eventDataSnapshot.val();
+                        displayEvent(eventData);
+                    });
+                });
+            });
         }
 
-        createCalendar();
- </script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
-<script>
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID",
-  };
-  const app = firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-</script>
-   
+        window.onload = function() {
+            createCalendar();
+            loadEvents();
+        };
+
+        // Import and initialize Firebase
+        import { initializeApp } from "firebase/app";
+        const firebaseConfig = {
+            apiKey: "AIzaSyCWDiZhS8jL393Pqkp-OXkSb6eWhv9dq6w",
+            authDomain: "samsic-bron.firebaseapp.com",
+            databaseURL: "https://samsic-bron-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "samsic-bron",
+            storageBucket: "samsic-bron.appspot.com",
+            messagingSenderId: "1084633970213",
+            appId: "1:1084633970213:web:fb0533960966ec828371cc"
+        };
+        const app = initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>
